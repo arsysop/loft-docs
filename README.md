@@ -7,7 +7,7 @@ LOFT Documentation
 
 ```
 cd examples/vectorTests
-cmake -G "<generator>" -S "" -B "build"
+cmake -G "<generator>" -S "" -B "build"   # run "cmake -G" for list of generators
 cmake --build build
 ```
 
