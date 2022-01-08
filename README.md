@@ -1,6 +1,8 @@
 # loft-docs
 LOFT Documentation
 
+![Build Status](https://github.com/arsysop/loft-docs/workflows/CI/badge.svg)
+
 ## Vector tests
 
 ### Building
