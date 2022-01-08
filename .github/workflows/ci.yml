@@ -116,7 +116,7 @@ jobs:
           mkdir build
           mkdir instdir
           cmake \
-            -S examples \
+            -S examples/vectorTest \
             -B build \
             -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} \
             -G "${{ matrix.config.generators }}" \
