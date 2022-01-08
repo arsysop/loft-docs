@@ -28,7 +28,6 @@ on:
   push:
     branches: 
     - main
-    - ci_pipeline
 
 jobs:
   build:
