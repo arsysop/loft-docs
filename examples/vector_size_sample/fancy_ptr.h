@@ -1,9 +1,26 @@
-//
-// Created by Vladimir on 21.12.2021.
-//
+/*******************************************************************************
+ * Copyright (c) 2022 ArSysOp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Contributors:
+ *     (ArSysOp) - initial API and implementation
+ *******************************************************************************/
 
-#ifndef UNTITLED_FANCY_PTR_H
-#define UNTITLED_FANCY_PTR_H
+#ifndef FANCY_PTR_H
+#define FANCY_PTR_H
 
 
 #include <vector>
@@ -12,7 +29,10 @@
 using std::nullptr_t;
 using std::true_type;
 
-template<class Tp_>
+namespace my {
+
+
+template<class Tp>
 class Ptr;
 
 template<class T>
@@ -104,69 +124,70 @@ struct CPtr {
 };
 
 
-template<class Tp_>
-class alloc;
+template<class Tp>
+class custom_allocator;
 
 template<>
-class _LIBCPP_TEMPLATE_VIS alloc<void> {
+class custom_allocator<void> {
 public:
     typedef void *pointer;
     typedef const void *const_pointer;
     typedef void value_type;
 
-    template<class Up_>
+    template<class Up>
     struct rebind {
-        typedef alloc<Up_> other;
+        typedef custom_allocator<Up> other;
     };
 };
 
-template<class Tp_>
-class _LIBCPP_TEMPLATE_VIS alloc {
+template<class Tp>
+class custom_allocator {
 public:
     typedef size_t size_type;
     typedef ptrdiff_t difference_type;
-    typedef Ptr<Tp_> pointer; // typedef Tp_ *pointer;
-//    typedef const CPtr<Tp_> const_pointer; // typedef const Tp_ *const_pointer;
-    typedef const Ptr<Tp_> const_pointer; // typedef const Tp_ *const_pointer;
-    typedef Tp_ &reference;
-    typedef const Tp_ &const_reference;
-    typedef Tp_ value_type;
+    typedef Ptr<Tp> pointer; // was: typedef Tp *pointer;
+//    typedef const CPtr<Tp> const_pointer; // typedef const Tp *const_pointer;
+    typedef const Ptr<Tp> const_pointer; // typedef const Tp *const_pointer;
+    typedef Tp &reference;
+    typedef const Tp &const_reference;
+    typedef Tp value_type;
 
     typedef true_type propagate_on_container_move_assignment;
     typedef true_type is_always_equal;
 
-    alloc() noexcept {}
+    custom_allocator() noexcept {}
 
     template<class _Up>
-    alloc(const alloc<_Up> &) noexcept {}
+    custom_allocator(const custom_allocator<_Up> &) noexcept {}
 
-    pointer address(reference __x) const noexcept { return _VSTD::addressof(__x); }
+    pointer address(reference __x) const noexcept { return std::addressof(__x); }
 
     const_pointer address(const_reference __x) const noexcept {
-        return _VSTD::addressof(__x);
+        return std::addressof(__x);
     }
 
-    pointer allocate(size_type n, alloc<void>::const_pointer = 0) {
+    pointer allocate(size_type n, custom_allocator<void>::const_pointer = 0) {
         if (n > max_size())
-            std::__throw_length_error("allocator<T>::allocate(size_t n)"
+            std::__throw_length_error("custom_allocatorator<T>::allocate(size_t n)"
                                       " 'n' exceeds maximum supported size");
-        return static_cast<Tp_ *>(_VSTD::__libcpp_allocate(n * sizeof(Tp_), _LIBCPP_ALIGNOF(Tp_)));
+        return static_cast<Tp *>(std::__libcpp_allocate(n * sizeof(Tp), alignof(Tp)));
     }
 
     void deallocate(pointer p, size_type n) noexcept {
-        _VSTD::__libcpp_deallocate((void *) p.p_, n * sizeof(Tp_), _LIBCPP_ALIGNOF(Tp_));
+        std::__libcpp_deallocate((void *) p.p_, n * sizeof(Tp), alignof(Tp));
     }
 
-    size_type max_size() const noexcept { return size_type(~0) / sizeof(Tp_); }
+    size_type max_size() const noexcept { return size_type(~0) / sizeof(Tp); }
 
-    template<class _Up, class... _Args>
-
+    template<class Up, class... Args>
     void
-    construct(_Up *__p, _Args &&... __args) {
-        ::new((void *) __p) _Up(_VSTD::forward<_Args>(__args)...);
+    construct(Up *p, Args &&... args) {
+        ::new((void *) p) Up(std::forward<Args>(args)...);
     }
 
-    void destroy(pointer p) { p->~Tp_(); }
+    void destroy(pointer p) { p->~Tp(); }
 };
 
-#endif //UNTITLED_FANCY_PTR_H
+} // namespace my
+
+#endif //FANCY_PTR_H
