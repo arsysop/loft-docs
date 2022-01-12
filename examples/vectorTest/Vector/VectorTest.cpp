@@ -22,8 +22,22 @@
 #include <gtest/gtest.h>
 #include <vector>
 
-TEST(VectorTest, Clearing) {
-    std::vector<int> vect{1, 2, 3};
+template <typename T>
+class VectorTest : public ::testing::test {
+    protected:
+        using Vector = std::vector<T>; 
+}
+
+TYPED_TEST_SUITE_P(VectorTest);
+
+TYPED_TEST_P(VectorTest, Clearing) {
+    std::vector<TypeParam> vect{0};
     vect.clear();
     EXPECT_EQ(vect.empty(), true);
 }
+
+REGISTER_TYPED_TEST_SUITE_P(
+    VectorTest, 
+    Clearing);
+using TestedTypes = ::testing::Types<int>;
+INSTANTIATE_TYPED_TEST_SUITE_P(VectorTesting, VectorTest, TestedTypes);
