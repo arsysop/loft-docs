@@ -27,7 +27,8 @@ on:
     - main
   push:
     branches: 
-    - main
+    - main, 
+    - vector_tests
 
 jobs:
   build:
