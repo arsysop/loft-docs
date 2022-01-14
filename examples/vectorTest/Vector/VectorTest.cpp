@@ -22,11 +22,15 @@
 #include <gtest/gtest.h>
 #include <vector>
 
+namespace {
+
 template <typename T>
-class VectorTest : public ::testing::test {
+class VectorTest : public ::testing::Test {
     protected:
         using Vector = std::vector<T>; 
-}
+};
+
+using testing::Types;
 
 TYPED_TEST_SUITE_P(VectorTest);
 
@@ -41,3 +45,4 @@ REGISTER_TYPED_TEST_SUITE_P(
     Clearing);
 using TestedTypes = ::testing::Types<int>;
 INSTANTIATE_TYPED_TEST_SUITE_P(VectorTesting, VectorTest, TestedTypes);
+}
