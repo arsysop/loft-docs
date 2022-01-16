@@ -21,23 +21,35 @@
 
 #include <gtest/gtest.h>
 #include <vector>
+#include "VectorTest.h"
 
 namespace {
+
+
+template <typename T> 
+::std::vector<T> CreateVector() {
+    TestedVector<T> vectCreator;
+    ::std::vector<T> vect = vectCreator.testedVect;
+    return vect;
+}
 
 template <typename T>
 class VectorTest : public ::testing::Test {
     protected:
-        using Vector = std::vector<T>; 
+        VectorTest() { 
+            ::std::vector<T> vect = CreateVector<T>();
+        }
+        ~VectorTest() override {}
+        ::std::vector<T> vect;
 };
 
-using testing::Types;
+using ::testing::Types;
 
 TYPED_TEST_SUITE_P(VectorTest);
 
 TYPED_TEST_P(VectorTest, Clearing) {
-    std::vector<TypeParam> vect{0};
-    vect.clear();
-    EXPECT_EQ(vect.empty(), true);
+    this->vect.clear();
+    EXPECT_EQ(this->vect.empty(), true);
 }
 
 REGISTER_TYPED_TEST_SUITE_P(
