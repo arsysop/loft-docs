@@ -31,38 +31,59 @@ using namespace std;
 
 class ConfigReader {
 
+    private:
+
+        list<string> readConfigFile() {
+            list<string> lines;
+            ifstream inputStream(configFile);
+            string configLine;
+            while (getline(inputStream, configLine))
+            {
+                lines.push_back(configLine);
+            }
+            return lines;
+        }
+
+        string findTypeNameInLine(string line) {
+            int typenameStart = line.find("<") + 1;
+            int typenameEnd = line.find(">") - 1;
+            string _typename = line.substr(typenameStart, typenameEnd - typenameStart + 1);
+            return _typename;
+        }
+
+        list<string> findValueListInLine(string line) {
+            list<string> valueList;
+            int typenameStart = line.find("{") + 1;
+            int typenameEnd = line.find("}") - 1;
+            istringstream valuesWithoutBraces(line.substr(typenameStart, typenameEnd - typenameStart + 1));
+            do {
+                    string currentValue;
+                    valuesWithoutBraces >> currentValue;
+                    valueList.push_back(currentValue);
+                } while (valuesWithoutBraces);
+                    
+            return valueList;
+        }
+
     public:
         ConfigReader() {
 
         }
 
-        list<string> typeNames(){
-            ifstream inputStream(configFile);
-            string configLine;
+        list<string> typeNames() {
             list<string> typeNameList;
-            while (getline(inputStream, configLine)) {
-                int typenameStart = configLine.find("<") + 1;
-                int typenameEnd = configLine.find(">") - 1;
-                typeNameList.push_back(configLine.substr(typenameStart, typenameEnd - typenameStart + 1));
+            for(string configLine : readConfigFile()) {
+                typeNameList.push_back(findTypeNameInLine(configLine));
             }
             return typeNameList;
         }
 
-        list<string> exampleStringValues(string typeName){
-            ifstream inputStream(configFile);
-            string configLine;
+        list<string> exampleStringValues(string typeName) {
             list<string> valueList;
-            while (getline(inputStream, configLine))
+            for(string configLine : readConfigFile())
             {
                 if(configLine.find("<" + typeName + ">") != -1) {
-                    int valueListStart = configLine.find("{") + 1;
-                    int valueListEnd = configLine.find("}") - 1;
-                    istringstream valuesWithoutBraces(configLine.substr(valueListStart, valueListEnd - valueListStart + 1));
-                    do {
-                        string currentValue;
-                        valuesWithoutBraces >> currentValue;
-                        valueList.push_back(currentValue);
-                    } while (valuesWithoutBraces);
+                    valueList = findValueListInLine(configLine);
                     break;
                 }
             }
@@ -77,16 +98,7 @@ class TestedVector : public std::vector<T> {
         std::vector<T> testedVect;
     private:
         void CreateTestedVector(){
-            ConfigReader configReader;
-            std::list<string> stringVectorValues = configReader.exampleStringValues(typeid(T).name());
-            while (!stringVectorValues.empty())
-            {
-                string nextStringValue = stringVectorValues.front();
-                stringVectorValues.pop_front();
-                T nextValue;
-                stringstream convertTypenameToType(nextStringValue);
-                convertTypenameToType >> nextValue;
-                testedVect.push_back(nextValue);
-            }
+            // there is a place where typenames should
+            // be provided on the compile time
         }
 };
