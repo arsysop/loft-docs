@@ -1,0 +1,140 @@
+// Remove comments using jsmin or sed -e 's://.*::'
+// Example:
+// cat sample.json  | jsmin  | jsonlint
+// or
+// sed -e 's://.*::' sample.json | jsonlint
+{
+	"kind" : "compilation_session",
+	"tool" : {
+		"type" : "clang",
+		"path" : "",
+		"fingerprint" : ""
+	},
+	"options" : [
+		
+	],
+	"index" : {	// All declared types as a semantic tree ie from semantic parent to the children
+		"kind" : "file",
+		"name" : "",
+		"children" : [
+			{
+				"builtin_types" : [	// List of actually used types only
+					// Should I use typeid.name()  instead of hash_code()? (close to mangled name. better readable: "v" for void, "i" for int)
+					{"name" : "void", "typeid" : "4378816352"}, 
+					{"name" : "int", "typeid" : "4304383924"}, 
+					{"name" : "unsigned long", "typeid" : "4304383888"}
+				],
+				"kind" : "namespace",
+				"name" : "std",
+				"children" : [
+					{
+						"kind" : "ClassTemplate",		// This is a base template declaration (not instantiated)
+						"name" : "__vector_base",
+						"typeid" : "986712405346870",
+						"TmplParams" : [
+							{
+								"kind" : "TemplateTypeParameter",
+								"name" : "_Tp"
+							},
+							{
+								"kind" : "TemplateTypeParameter",
+								"name" : "Allocator"
+							}
+						],
+						"members" : [
+							{
+								"kind" : "Field",
+								"access" : "protected",
+								"typeRef" : "229304029448633"	// TBD: reference to elaborated (?) dependent type `allocator_traits<Allocator>::pointer`
+							},
+							{
+								"kind" : "CXXMethod",
+								"name" : "capacity",
+								"access" : "protected",
+								"cv_qual" : "const",			// cv_qual is optional, as well as ref_qual
+								"ret_typeRef" : "4304383888",	// reference to builtin unsigned long resolved via size_type typedef
+								"args" : [
+									// empty list; otherwise
+								]
+							},
+							{
+								"kind" : "CXXMethod",
+								"name" : "__copy_assign_alloc",	// Shall we skip private or internal members?
+								"access" : "protected",
+								"ret_typeRef" : "4378816352",	// reference to builtin void pseudo-type
+								"args" : [
+									{
+										// const __vector_base& __c
+										"typeRef" : "986712405346870&",  // Trailing "&" denotes the reference type: __vector_base&
+										"cv_qual" : "const"
+									}
+								]
+							}
+						]
+					},
+					
+					{
+						"kind" : "ClassTemplate",		// This is a base template declaration (not instantiated)
+						"name" : "vector",
+						"typeid" : "986712405346870",
+						"TmplParams" : [
+							{
+								"kind" : "TemplateTypeParameter",
+								"name" : "_Tp",
+								"typeid" : "986541234097"
+							},
+							{
+								"kind" : "TemplateTypeParameter",
+								"name" : "Allocator",
+								"typeid" : "9723479748945"
+							
+							}
+						],
+						"base" : {
+							"kind" : "Class", // ??? In fact it is a template parametrized with dependent type arguments
+							"typeRef" : "986712405346870",	// reference to __vector_base decl
+							"TmplArgs" : [
+								{"typeRef" : "986541234097"},	// Reference to _Tp  (dependent type)
+								{"typeRef" : "9723479748945"}	// Reference to Allocator (dependent type)
+							]
+						},
+						"members" : [
+							{
+								"kind" : "Field",
+								"access" : "protected",
+								"typeRef" : "229304029448633"	// TBD: reference to elaborated (?) dependent type `allocator_traits<Allocator>::pointer`
+							},
+							{
+								"kind" : "CXXMethod",
+								"name" : "capacity",
+								"access" : "protected",
+								"cv_qual" : "const",			// cv_qual is optional, as well as ref_qual
+								"ret_typeRef" : "4304383888",	// reference to builtin unsigned long resolved via size_type typedef
+								"args" : [
+									// empty list; otherwise
+								]
+							},
+							{
+								"kind" : "CXXMethod",
+								"name" : "__copy_assign_alloc",	// Shall we skip private or internal members?
+								"access" : "protected",
+								"ret_typeRef" : "4378816352",	// reference to builtin void pseudo-type
+								"args" : [
+									{
+										// const __vector_base& __c
+										"typeRef" : "986712405346870&",  // Trailing "&" denotes the reference type: __vector_base&
+										"cv_qual" : "const"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	
+	"call_tree" : {
+		// TODO Call graph referencing the types from index above
+	}
+}
