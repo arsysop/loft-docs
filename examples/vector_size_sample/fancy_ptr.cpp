@@ -48,3 +48,11 @@ typedef std::vector<int, my::custom_allocator<int>> FancyVec;
 int foo_adapter_custom(const FancyVec& v) {
     return foo(&v[0], v.size());
 }
+
+int foo_at_rvalue(const FancyVec& v, size_t n) {
+	return v.at(n);
+}
+
+void foo_at_lvalue(FancyVec& v, size_t n) {
+	v.at(n) = 42;
+}

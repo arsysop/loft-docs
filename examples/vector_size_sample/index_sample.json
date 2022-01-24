@@ -129,12 +129,83 @@
 							}
 						]
 					}
+
+					{
+						"kind" : "ClassTemplateSpecializationDecl",
+						"location" : "/opt/llvm-13/bin/../include/c++/v1/vector:492:1, line:952:1",
+						"name" : "vector",
+						"typeid" : "0x1400f3898",
+						"TmplArgs" : [
+							{
+								"kind" : "BuiltinType",
+								"name" : "int", // Do I need a type name when I have the typeRef?
+								"typeRef" : "FIXME"	// 0x15380bf10
+							},
+							{
+								"kind" : "RecordType", // or ClassTemplateSpecialization 0x1400f36a8 'custom_allocator'
+								"name" : "my::custom_allocator<int>'", // Do I need a type name when I have the typeRef?
+								"typeRef" : "0x1400f3790"
+							}
+						],
+						"base" : {
+							"kind" : "Class", // ??? In fact it is a template parametrized with dependent type arguments
+							"signature" : "std::__vector_base<int, my::custom_allocator<int>>",
+							"name" : "__vector_base",
+							"typeRef" : "986712405346870"	// reference to __vector_base decl
+							// TODO
+						},
+						"members" : [
+							{
+								// CXXMethodDecl 0x1584b13f8 <line:1594:1, line:1600:1> line:694:21 used at 'std::vector<int, my::custom_allocator<int>>::const_reference (std::vector<int, my::custom_allocator<int>>::size_type) const'
+								"typeid" : "0x1584b13f8",
+								"kind" : "CXXMethod",
+								"type" : "std::vector<int, my::custom_allocator<int>>::const_reference (std::vector<int, my::custom_allocator<int>>::size_type) const",
+								"name" : "at",
+								"access" : "public",
+								"cv_qual" : "const",
+								"ret_typeRef" : "FIXME",	// reference to 'my::custom_allocator<int>>::const_reference'
+								"args" : [
+									// ParmVarDecl 0x1584b1330 <col:24, col:34> col:34 used __n 'std::vector<int, my::custom_allocator<int>>::size_type':'unsigned long'
+									// "type" : "my::custom_allocator<int>>::size_type" // dependent type, actual
+									"typeRef" : "4304383888", // resolved to unsigned long
+									"name" : "__n"
+								]
+							}
+						]
+					},
+					{
+						"typeid" : "0x1584b9ea0",
+						"kind" : "FunctionDecl",
+						"type" : "int (const FancyVec &, size_t)",
+						"name" : "foo_at_rvalue",
+						"ret_typeRef" : "4304383924",	// reference to builtin int
+						"args" : [
+							// TODO
+						]
+					}
 				]
 			}
 		]
 	},
-	
+
+// call tree example:
+// 	foo_at_rvalue
+//		vector::at
+//			vector::size
+//				operator- // User-defined function of type ptrdiff_t (const Ptr<int> &, const Ptr<int> &)'
+//			__throw_out_of_range
+//			vector::operator[]
+//
+
 	"call_tree" : {
 		// TODO Call graph referencing the types from index above
+		"children" : [
+			{
+				"typeRef": "0x1584b9ea0", // foo_at_rvalue
+				"callExpr" : {
+					"typeRef" : "0x1584b13f8" // vector::at,  specific overloads with wpecific template parameters
+				}
+			}
+		]
 	}
 }

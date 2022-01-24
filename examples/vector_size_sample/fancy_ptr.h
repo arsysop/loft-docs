@@ -105,7 +105,7 @@ struct Ptr {
 
 
 template<class T>
-ptrdiff_t operator-(const Ptr<T> a, const Ptr<T> &b) {
+ptrdiff_t operator-(const Ptr<T>& a, const Ptr<T> b) {
     return a.p_ - b.p_;
 }
 
