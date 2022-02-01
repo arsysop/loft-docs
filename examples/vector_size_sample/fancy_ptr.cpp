@@ -34,6 +34,9 @@
 
 #include <vector>
 
+// Explicit instantiation
+template class std::vector<int, my::custom_allocator<int>>;
+template class std::vector<int>;
 
 extern "C" int foo(const int* buf, unsigned long n);
 
