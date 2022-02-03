@@ -1,0 +1,62 @@
+{
+    {
+      "kind": "FunctionDecl",
+      "name": "foo",
+      "type": "int (const int *, unsigned long)",
+      "usr": "c:@F@foo",
+      "signature": "int foo(const int * buf, unsigned long n)"
+      "args": [
+        "const int *"        ,        
+        "unsigned long"        
+      ]
+    },
+    {
+      "kind": "FunctionDecl",
+      "name": "foo_adapter_default",
+      "type": "int (const std::vector<int> &)",
+      "usr": "c:@F@foo_adapter_default#&1$@N@std@N@__1@S@vector>#I#$@N@std@N@__1@S@allocator>#I#",
+      "signature": "int foo_adapter_default(const std::vector<int> & v)"
+      "args": [
+        "const std::vector<int> &"        
+      ]
+    },
+    {
+      "kind": "TypedefDecl",
+      "name": "FancyVec",
+      "type": "FancyVec",
+      "usr": "c:fancy_ptr.cpp@T@FancyVec",
+      "signature": "FancyVec FancyVec"
+    },
+    {
+      "kind": "FunctionDecl",
+      "name": "foo_adapter_custom",
+      "type": "int (const FancyVec &)",
+      "usr": "c:@F@foo_adapter_custom#&1$@N@std@N@__1@S@vector>#I#$@N@my@S@custom_allocator>#I#",
+      "signature": "int foo_adapter_custom(const FancyVec & v)"
+      "args": [
+        "const FancyVec &"        
+      ]
+    },
+    {
+      "kind": "FunctionDecl",
+      "name": "foo_at_rvalue",
+      "type": "int (const FancyVec &, size_t)",
+      "usr": "c:@F@foo_at_rvalue#&1$@N@std@N@__1@S@vector>#I#$@N@my@S@custom_allocator>#I#l#",
+      "signature": "int foo_at_rvalue(const FancyVec & v, size_t n)"
+      "args": [
+        "const FancyVec &"        ,        
+        "size_t"        
+      ]
+    },
+    {
+      "kind": "FunctionDecl",
+      "name": "foo_at_lvalue",
+      "type": "void (FancyVec &, size_t)",
+      "usr": "c:@F@foo_at_lvalue#&$@N@std@N@__1@S@vector>#I#$@N@my@S@custom_allocator>#I#l#",
+      "signature": "void foo_at_lvalue(FancyVec & v, size_t n)"
+      "args": [
+        "FancyVec &"        ,        
+        "size_t"        
+      ]
+    },
+},
