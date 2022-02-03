@@ -1,5 +1,2486 @@
 {
     {
+      "kind": "Namespace",
+      "name": "std",
+      "usr": "c:@N@std",
+      "signature": " std"
+        {
+          "kind": "Namespace",
+          "name": "__1",
+          "usr": "c:@N@std@N@__1",
+          "signature": " __1"
+            {
+              "kind": "ClassTemplate",
+              "name": "__vector_base_common",
+              "usr": "c:@N@std@N@__1@ST>1#Nb@__vector_base_common",
+              "signature": "template<bool > class __vector_base_common"
+                {
+                  "kind": "CXXConstructor",
+                  "name": "__vector_base_common<>",
+                  "type": "void ()",
+                  "usr": "c:@N@std@N@__1@ST>1#Nb@__vector_base_common@F@__vector_base_common#",
+                  "signature": "void __vector_base_common<>()"
+                },
+            },
+            {
+              "kind": "ClassDecl",
+              "name": "__vector_base_common",
+              "type": "std::__vector_base_common<true>",
+              "usr": "c:@N@std@N@__1@S@__vector_base_common>#Vb1",
+              "signature": "std::__vector_base_common<true> std::__vector_base_common<true>"
+            },
+            {
+              "kind": "ClassTemplate",
+              "name": "__vector_base",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base",
+              "signature": "template<class _Tp, class _Allocator> class __vector_base"
+                {
+                  "kind": "TypedefDecl",
+                  "name": "allocator_type",
+                  "type": "std::__vector_base::allocator_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@allocator_type",
+                  "signature": "std::__vector_base::allocator_type allocator_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "__alloc_traits",
+                  "type": "std::__vector_base::__alloc_traits",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@__alloc_traits",
+                  "signature": "std::__vector_base::__alloc_traits __alloc_traits"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "size_type",
+                  "type": "std::__vector_base::size_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@size_type",
+                  "signature": "std::__vector_base::size_type size_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "value_type",
+                  "type": "std::__vector_base::value_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@value_type",
+                  "signature": "std::__vector_base::value_type value_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "reference",
+                  "type": "std::__vector_base::reference",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@reference",
+                  "signature": "std::__vector_base::reference reference"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_reference",
+                  "type": "std::__vector_base::const_reference",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@const_reference",
+                  "signature": "std::__vector_base::const_reference const_reference"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "difference_type",
+                  "type": "std::__vector_base::difference_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@difference_type",
+                  "signature": "std::__vector_base::difference_type difference_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "pointer",
+                  "type": "std::__vector_base::pointer",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@pointer",
+                  "signature": "std::__vector_base::pointer pointer"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_pointer",
+                  "type": "std::__vector_base::const_pointer",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@const_pointer",
+                  "signature": "std::__vector_base::const_pointer const_pointer"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "iterator",
+                  "type": "std::__vector_base::iterator",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@iterator",
+                  "signature": "std::__vector_base::iterator iterator"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_iterator",
+                  "type": "std::__vector_base::const_iterator",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@T@const_iterator",
+                  "signature": "std::__vector_base::const_iterator const_iterator"
+                },
+                {
+                  "kind": "FieldDecl",
+                  "name": "__begin_",
+                  "type": "std::__vector_base::pointer",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@FI@__begin_",
+                  "signature": "std::__vector_base::pointer __begin_"
+                },
+                {
+                  "kind": "FieldDecl",
+                  "name": "__end_",
+                  "type": "std::__vector_base::pointer",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@FI@__end_",
+                  "signature": "std::__vector_base::pointer __end_"
+                },
+                {
+                  "kind": "FieldDecl",
+                  "name": "__end_cap_",
+                  "type": "__compressed_pair<std::__vector_base::pointer, std::__vector_base::allocator_type>",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@FI@__end_cap_",
+                  "signature": "__compressed_pair<std::__vector_base::pointer, std::__vector_base::allocator_type> __end_cap_"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "__vector_base<_Tp, _Allocator>",
+                  "type": "void () noexcept(is_nothrow_default_constructible<allocator_type>::value)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@__vector_base#",
+                  "signature": "void __vector_base<_Tp, _Allocator>()"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "__vector_base<_Tp, _Allocator>",
+                  "type": "void (const std::__vector_base::allocator_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@__vector_base#&1t0.1#",
+                  "signature": "void __vector_base<_Tp, _Allocator>(const std::__vector_base::allocator_type & __a)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "__vector_base<_Tp, _Allocator>",
+                  "type": "void (std::__vector_base::allocator_type &&) noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@__vector_base#&&t0.1#",
+                  "signature": "void __vector_base<_Tp, _Allocator>(std::__vector_base::allocator_type && __a)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "clear",
+                  "type": "void () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@clear#",
+                  "signature": "void clear();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "capacity",
+                  "type": "std::__vector_base::size_type () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@capacity#1",
+                  "signature": "std::__vector_base::size_type capacity() const;"
+                  "args": [
+                  ]
+                },
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "__vector_base<_Tp, _Allocator>",
+              "type": "void () noexcept(is_nothrow_default_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@__vector_base#",
+              "signature": "void __vector_base<_Tp, _Allocator>()"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "__vector_base<_Tp, _Allocator>",
+              "type": "void (const std::__vector_base::allocator_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@__vector_base#&1t0.1#",
+              "signature": "void __vector_base<_Tp, _Allocator>(const std::__vector_base::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "__vector_base<_Tp, _Allocator>",
+              "type": "void (std::__vector_base::allocator_type &&) noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@__vector_base@F@__vector_base#&&t0.1#",
+              "signature": "void __vector_base<_Tp, _Allocator>(std::__vector_base::allocator_type && __a)"
+            },
+            {
+              "kind": "ClassTemplate",
+              "name": "vector",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector",
+              "signature": "template<class _Tp, class _Allocator> class vector"
+                {
+                  "kind": "TypedefDecl",
+                  "name": "__base",
+                  "type": "std::vector::__base",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@__base",
+                  "signature": "std::vector::__base __base"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "__default_allocator_type",
+                  "type": "std::vector::__default_allocator_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@__default_allocator_type",
+                  "signature": "std::vector::__default_allocator_type __default_allocator_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "__self",
+                  "type": "std::vector::__self",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@__self",
+                  "signature": "std::vector::__self __self"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "value_type",
+                  "type": "std::vector::value_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@value_type",
+                  "signature": "std::vector::value_type value_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "allocator_type",
+                  "type": "std::vector::allocator_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@allocator_type",
+                  "signature": "std::vector::allocator_type allocator_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "__alloc_traits",
+                  "type": "std::vector::__alloc_traits",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@__alloc_traits",
+                  "signature": "std::vector::__alloc_traits __alloc_traits"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "reference",
+                  "type": "std::vector::reference",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@reference",
+                  "signature": "std::vector::reference reference"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_reference",
+                  "type": "std::vector::const_reference",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@const_reference",
+                  "signature": "std::vector::const_reference const_reference"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "size_type",
+                  "type": "std::vector::size_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@size_type",
+                  "signature": "std::vector::size_type size_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "difference_type",
+                  "type": "std::vector::difference_type",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@difference_type",
+                  "signature": "std::vector::difference_type difference_type"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "pointer",
+                  "type": "std::vector::pointer",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@pointer",
+                  "signature": "std::vector::pointer pointer"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_pointer",
+                  "type": "std::vector::const_pointer",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@const_pointer",
+                  "signature": "std::vector::const_pointer const_pointer"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "iterator",
+                  "type": "std::vector::iterator",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@iterator",
+                  "signature": "std::vector::iterator iterator"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_iterator",
+                  "type": "std::vector::const_iterator",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@const_iterator",
+                  "signature": "std::vector::const_iterator const_iterator"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "reverse_iterator",
+                  "type": "std::vector::reverse_iterator",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@reverse_iterator",
+                  "signature": "std::vector::reverse_iterator reverse_iterator"
+                },
+                {
+                  "kind": "TypedefDecl",
+                  "name": "const_reverse_iterator",
+                  "type": "std::vector::const_reverse_iterator",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@T@const_reverse_iterator",
+                  "signature": "std::vector::const_reverse_iterator const_reverse_iterator"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void () noexcept(is_nothrow_default_constructible<allocator_type>::value)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#",
+                  "signature": "void vector<_Tp, _Alloc>()"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (const std::vector::allocator_type &) noexcept(is_nothrow_copy_constructible<allocator_type>::value)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&1t0.1#",
+                  "signature": "void vector<_Tp, _Alloc>(const std::vector::allocator_type & __a)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (std::vector::size_type)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+                  "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (std::vector::size_type, const std::vector::allocator_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#&1t0.1#",
+                  "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n, const std::vector::allocator_type & __a)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (std::vector::size_type, const std::vector::value_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#&1t0.0#",
+                  "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n, const std::vector::value_type & __x)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (std::vector::size_type, const std::vector::value_type &, const std::vector::allocator_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#&1t0.0#&1t0.1#",
+                  "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n, const std::vector::value_type & __x, const std::vector::allocator_type & __a)"
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (_InputIterator, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, _InputIterator>::type)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, type-parameter-1-0>:::type#v#",
+                  "signature": "void vector<_Tp, _Alloc><class _InputIterator>(_InputIterator __first, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, _InputIterator>::type __last)"
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (_InputIterator, _InputIterator, const std::vector::allocator_type &, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value>::type *)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#S0_#&1t0.1#*^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>:::type#v#",
+                  "signature": "void vector<_Tp, _Alloc><class _InputIterator>(_InputIterator __first, _InputIterator __last, const std::vector::allocator_type & __a, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value>::type * )"
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (_ForwardIterator, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, _ForwardIterator>::type)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, type-parameter-1-0>:::type#v#",
+                  "signature": "void vector<_Tp, _Alloc><class _ForwardIterator>(_ForwardIterator __first, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, _ForwardIterator>::type __last)"
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (_ForwardIterator, _ForwardIterator, const std::vector::allocator_type &, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value>::type *)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#S0_#&1t0.1#*^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>:::type#v#",
+                  "signature": "void vector<_Tp, _Alloc><class _ForwardIterator>(_ForwardIterator __first, _ForwardIterator __last, const std::vector::allocator_type & __a, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value>::type * )"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (const vector<_Tp, _Alloc> &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+                  "signature": "void vector<_Tp, _Alloc>(const vector<_Tp, _Alloc> & __x)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (const vector<_Tp, _Alloc> &, const std::vector::allocator_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#&1S4_#",
+                  "signature": "void vector<_Tp, _Alloc>(const vector<_Tp, _Alloc> & __x, const std::vector::allocator_type & __a)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "operator=",
+                  "type": "vector<_Tp, _Alloc> &(const vector<_Tp, _Alloc> &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator=#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+                  "signature": "vector<_Tp, _Alloc> & operator=(const vector<_Tp, _Alloc> & __x);"
+                  "args": [
+                    "const vector<_Tp, _Alloc> &"                    
+                  ]
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (initializer_list<std::vector::value_type>)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#>@N@std@ST>1#T@initializer_list1t0.0#",
+                  "signature": "void vector<_Tp, _Alloc>(initializer_list<std::vector::value_type> __il)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (initializer_list<std::vector::value_type>, const std::vector::allocator_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#>@N@std@ST>1#T@initializer_list1t0.0#&1t0.1#",
+                  "signature": "void vector<_Tp, _Alloc>(initializer_list<std::vector::value_type> __il, const std::vector::allocator_type & __a)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (vector<_Tp, _Alloc> &&) noexcept(is_nothrow_move_constructible<allocator_type>::value)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+                  "signature": "void vector<_Tp, _Alloc>(vector<_Tp, _Alloc> && __x)"
+                },
+                {
+                  "kind": "CXXConstructor",
+                  "name": "vector<_Tp, _Alloc>",
+                  "type": "void (vector<_Tp, _Alloc> &&, const std::vector::allocator_type &)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#&1S4_#",
+                  "signature": "void vector<_Tp, _Alloc>(vector<_Tp, _Alloc> && __x, const std::vector::allocator_type & __a)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "operator=",
+                  "type": "vector<_Tp, _Alloc> &(vector<_Tp, _Alloc> &&) noexcept((__noexcept_move_assign_container<_Allocator, __alloc_traits>::value))",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator=#&&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+                  "signature": "vector<_Tp, _Alloc> & operator=(vector<_Tp, _Alloc> && __x);"
+                  "args": [
+                    "vector<_Tp, _Alloc> &&"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "operator=",
+                  "type": "vector<_Tp, _Alloc> &(initializer_list<std::vector::value_type>)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator=#>@N@std@ST>1#T@initializer_list1t0.0#",
+                  "signature": "vector<_Tp, _Alloc> & operator=(initializer_list<std::vector::value_type> __il);"
+                  "args": [
+                    "initializer_list<std::vector::value_type>"                    
+                  ]
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "assign",
+                  "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>::type (_InputIterator, _InputIterator)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tassign#t1.0#S0_#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>:::type#",
+                  "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>::type assign<class _InputIterator>(_InputIterator __first, _InputIterator __last)"
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "assign",
+                  "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>::type (_ForwardIterator, _ForwardIterator)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tassign#t1.0#S0_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>:::type#",
+                  "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>::type assign<class _ForwardIterator>(_ForwardIterator __first, _ForwardIterator __last)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "assign",
+                  "type": "void (std::vector::size_type, std::vector::const_reference)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@assign#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+                  "signature": "void assign(std::vector::size_type __n, std::vector::const_reference __u);"
+                  "args": [
+                    "std::vector::size_type"                    ,                    
+                    "std::vector::const_reference"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "assign",
+                  "type": "void (initializer_list<std::vector::value_type>)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@assign#>@N@std@ST>1#T@initializer_list1t0.0#",
+                  "signature": "void assign(initializer_list<std::vector::value_type> __il);"
+                  "args": [
+                    "initializer_list<std::vector::value_type>"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "get_allocator",
+                  "type": "std::vector::allocator_type () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@get_allocator#1",
+                  "signature": "std::vector::allocator_type get_allocator() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "begin",
+                  "type": "std::vector::iterator () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@begin#",
+                  "signature": "std::vector::iterator begin();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "begin",
+                  "type": "std::vector::const_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@begin#1",
+                  "signature": "std::vector::const_iterator begin() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "end",
+                  "type": "std::vector::iterator () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@end#",
+                  "signature": "std::vector::iterator end();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "end",
+                  "type": "std::vector::const_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@end#1",
+                  "signature": "std::vector::const_iterator end() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "rbegin",
+                  "type": "std::vector::reverse_iterator () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@rbegin#",
+                  "signature": "std::vector::reverse_iterator rbegin();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "rbegin",
+                  "type": "std::vector::const_reverse_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@rbegin#1",
+                  "signature": "std::vector::const_reverse_iterator rbegin() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "rend",
+                  "type": "std::vector::reverse_iterator () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@rend#",
+                  "signature": "std::vector::reverse_iterator rend();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "rend",
+                  "type": "std::vector::const_reverse_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@rend#1",
+                  "signature": "std::vector::const_reverse_iterator rend() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "cbegin",
+                  "type": "std::vector::const_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@cbegin#1",
+                  "signature": "std::vector::const_iterator cbegin() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "cend",
+                  "type": "std::vector::const_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@cend#1",
+                  "signature": "std::vector::const_iterator cend() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "crbegin",
+                  "type": "std::vector::const_reverse_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@crbegin#1",
+                  "signature": "std::vector::const_reverse_iterator crbegin() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "crend",
+                  "type": "std::vector::const_reverse_iterator () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@crend#1",
+                  "signature": "std::vector::const_reverse_iterator crend() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "size",
+                  "type": "std::vector::size_type () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@size#1",
+                  "signature": "std::vector::size_type size() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "capacity",
+                  "type": "std::vector::size_type () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@capacity#1",
+                  "signature": "std::vector::size_type capacity() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "empty",
+                  "type": "bool () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@empty#1",
+                  "signature": "bool empty() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "max_size",
+                  "type": "std::vector::size_type () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@max_size#1",
+                  "signature": "std::vector::size_type max_size() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "reserve",
+                  "type": "void (std::vector::size_type)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@reserve#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+                  "signature": "void reserve(std::vector::size_type __n);"
+                  "args": [
+                    "std::vector::size_type"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "shrink_to_fit",
+                  "type": "void () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@shrink_to_fit#",
+                  "signature": "void shrink_to_fit();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "operator[]",
+                  "type": "std::vector::reference (std::vector::size_type) noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator[]#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+                  "signature": "std::vector::reference operator[](std::vector::size_type __n);"
+                  "args": [
+                    "std::vector::size_type"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "operator[]",
+                  "type": "std::vector::const_reference (std::vector::size_type) const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator[]#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#1",
+                  "signature": "std::vector::const_reference operator[](std::vector::size_type __n) const;"
+                  "args": [
+                    "std::vector::size_type"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "at",
+                  "type": "std::vector::reference (std::vector::size_type)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@at#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+                  "signature": "std::vector::reference at(std::vector::size_type __n);"
+                  "args": [
+                    "std::vector::size_type"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "at",
+                  "type": "std::vector::const_reference (std::vector::size_type) const",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@at#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#1",
+                  "signature": "std::vector::const_reference at(std::vector::size_type __n) const;"
+                  "args": [
+                    "std::vector::size_type"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "front",
+                  "type": "std::vector::reference () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@front#",
+                  "signature": "std::vector::reference front();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "front",
+                  "type": "std::vector::const_reference () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@front#1",
+                  "signature": "std::vector::const_reference front() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "back",
+                  "type": "std::vector::reference () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@back#",
+                  "signature": "std::vector::reference back();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "back",
+                  "type": "std::vector::const_reference () const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@back#1",
+                  "signature": "std::vector::const_reference back() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "data",
+                  "type": "std::vector::value_type *() noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@data#",
+                  "signature": "std::vector::value_type * data();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "data",
+                  "type": "const std::vector::value_type *() const noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@data#1",
+                  "signature": "const std::vector::value_type * data() const;"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "push_back",
+                  "type": "void (std::vector::const_reference)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@push_back#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+                  "signature": "void push_back(std::vector::const_reference __x);"
+                  "args": [
+                    "std::vector::const_reference"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "push_back",
+                  "type": "void (std::vector::value_type &&)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@push_back#&&t0.0#",
+                  "signature": "void push_back(std::vector::value_type && __x);"
+                  "args": [
+                    "std::vector::value_type &&"                    
+                  ]
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "emplace_back",
+                  "type": "void (_Args &&...)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#pTemplace_back#P&&t1.0#v#",
+                  "signature": "void emplace_back<class _Args>(_Args &&... __args)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "pop_back",
+                  "type": "void ()",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@pop_back#",
+                  "signature": "void pop_back();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "insert",
+                  "type": "std::vector::iterator (std::vector::const_iterator, std::vector::const_reference)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+                  "signature": "std::vector::iterator insert(std::vector::const_iterator __position, std::vector::const_reference __x);"
+                  "args": [
+                    "std::vector::const_iterator"                    ,                    
+                    "std::vector::const_reference"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "insert",
+                  "type": "std::vector::iterator (std::vector::const_iterator, std::vector::value_type &&)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#&&t0.0#",
+                  "signature": "std::vector::iterator insert(std::vector::const_iterator __position, std::vector::value_type && __x);"
+                  "args": [
+                    "std::vector::const_iterator"                    ,                    
+                    "std::vector::value_type &&"                    
+                  ]
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "emplace",
+                  "type": "std::vector::iterator (std::vector::const_iterator, _Args &&...)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#pTemplace#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#P&&t1.0#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::pointer#",
+                  "signature": "std::vector::iterator emplace<class _Args>(std::vector::const_iterator __position, _Args &&... __args)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "insert",
+                  "type": "std::vector::iterator (std::vector::const_iterator, std::vector::size_type, std::vector::const_reference)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+                  "signature": "std::vector::iterator insert(std::vector::const_iterator __position, std::vector::size_type __n, std::vector::const_reference __x);"
+                  "args": [
+                    "std::vector::const_iterator"                    ,                    
+                    "std::vector::size_type"                    ,                    
+                    "std::vector::const_reference"                    
+                  ]
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "insert",
+                  "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, iterator>::type (std::vector::const_iterator, _InputIterator, _InputIterator)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tinsert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#t1.0#S2_#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, __wrap_iter<typename __vector_base<type-parameter-0-0, type-parameter-0-1>::pointer>>:::type#",
+                  "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, iterator>::type insert<class _InputIterator>(std::vector::const_iterator __position, _InputIterator __first, _InputIterator __last)"
+                },
+                {
+                  "kind": "FunctionTemplate",
+                  "name": "insert",
+                  "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, iterator>::type (std::vector::const_iterator, _ForwardIterator, _ForwardIterator)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tinsert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#t1.0#S2_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, __wrap_iter<typename __vector_base<type-parameter-0-0, type-parameter-0-1>::pointer>>:::type#",
+                  "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, iterator>::type insert<class _ForwardIterator>(std::vector::const_iterator __position, _ForwardIterator __first, _ForwardIterator __last)"
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "insert",
+                  "type": "std::vector::iterator (std::vector::const_iterator, initializer_list<std::vector::value_type>)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#>@N@std@ST>1#T@initializer_list1t0.0#",
+                  "signature": "std::vector::iterator insert(std::vector::const_iterator __position, initializer_list<std::vector::value_type> __il);"
+                  "args": [
+                    "std::vector::const_iterator"                    ,                    
+                    "initializer_list<std::vector::value_type>"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "erase",
+                  "type": "std::vector::iterator (std::vector::const_iterator)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@erase#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#",
+                  "signature": "std::vector::iterator erase(std::vector::const_iterator __position);"
+                  "args": [
+                    "std::vector::const_iterator"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "erase",
+                  "type": "std::vector::iterator (std::vector::const_iterator, std::vector::const_iterator)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@erase#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#S0_#",
+                  "signature": "std::vector::iterator erase(std::vector::const_iterator __first, std::vector::const_iterator __last);"
+                  "args": [
+                    "std::vector::const_iterator"                    ,                    
+                    "std::vector::const_iterator"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "clear",
+                  "type": "void () noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@clear#",
+                  "signature": "void clear();"
+                  "args": [
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "resize",
+                  "type": "void (std::vector::size_type)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@resize#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+                  "signature": "void resize(std::vector::size_type __sz);"
+                  "args": [
+                    "std::vector::size_type"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "resize",
+                  "type": "void (std::vector::size_type, std::vector::const_reference)",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@resize#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+                  "signature": "void resize(std::vector::size_type __sz, std::vector::const_reference __x);"
+                  "args": [
+                    "std::vector::size_type"                    ,                    
+                    "std::vector::const_reference"                    
+                  ]
+                },
+                {
+                  "kind": "CXXMethod",
+                  "name": "swap",
+                  "type": "void (vector<_Tp, _Alloc> &) noexcept",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@swap#&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+                  "signature": "void swap(vector<_Tp, _Alloc> & );"
+                  "args": [
+                    "vector<_Tp, _Alloc> &"                    
+                  ]
+                },
+                {
+                  "kind": "StructDecl",
+                  "name": "_ConstructTransaction",
+                  "type": "std::vector::_ConstructTransaction",
+                  "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction",
+                  "signature": "std::vector::_ConstructTransaction std::vector::_ConstructTransaction"
+                    {
+                      "kind": "CXXConstructor",
+                      "name": "_ConstructTransaction",
+                      "type": "void (vector<_Tp, _Alloc> &, std::vector::size_type)",
+                      "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction@F@_ConstructTransaction#&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+                      "signature": "void _ConstructTransaction(vector<_Tp, _Alloc> & __v, std::vector::size_type __n)"
+                    },
+                    {
+                      "kind": "FieldDecl",
+                      "name": "__v_",
+                      "type": "vector<_Tp, _Alloc> &",
+                      "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction@FI@__v_",
+                      "signature": "vector<_Tp, _Alloc> & __v_"
+                    },
+                    {
+                      "kind": "FieldDecl",
+                      "name": "__pos_",
+                      "type": "std::vector::pointer",
+                      "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction@FI@__pos_",
+                      "signature": "std::vector::pointer __pos_"
+                    },
+                    {
+                      "kind": "FieldDecl",
+                      "name": "__new_end_",
+                      "type": "const std::vector::const_pointer",
+                      "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction@FI@__new_end_",
+                      "signature": "const std::vector::const_pointer __new_end_"
+                    },
+                    {
+                      "kind": "CXXConstructor",
+                      "name": "_ConstructTransaction",
+                      "type": "void (const std::vector::_ConstructTransaction &)",
+                      "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction@F@_ConstructTransaction#&1$@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction#",
+                      "signature": "void _ConstructTransaction(const std::vector::_ConstructTransaction & )"
+                    },
+                    {
+                      "kind": "CXXMethod",
+                      "name": "operator=",
+                      "type": "std::vector::_ConstructTransaction &(const std::vector::_ConstructTransaction &)",
+                      "usr": "c:@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction@F@operator=#&1$@N@std@N@__1@ST>2#T#T@vector@S@_ConstructTransaction#",
+                      "signature": "std::vector::_ConstructTransaction & operator=(const std::vector::_ConstructTransaction & );"
+                      "args": [
+                        "const std::vector::_ConstructTransaction &"                        
+                      ]
+                    },
+                },
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "max_size",
+              "type": "typename vector<_Tp, _Allocator>::size_type () const noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@max_size#1",
+              "signature": "typename vector<_Tp, _Allocator>::size_type max_size() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (std::vector::size_type)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+              "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (std::vector::size_type, const std::vector::allocator_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#&1t0.1#",
+              "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n, const std::vector::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (std::vector::size_type, const std::vector::value_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#&1t0.0#",
+              "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n, const std::vector::value_type & __x)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (std::vector::size_type, const std::vector::value_type &, const std::vector::allocator_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#&1t0.0#&1t0.1#",
+              "signature": "void vector<_Tp, _Alloc>(std::vector::size_type __n, const std::vector::value_type & __x, const std::vector::allocator_type & __a)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (_InputIterator, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, _InputIterator>::type)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, type-parameter-1-0>:::type#v#",
+              "signature": "void vector<_Tp, _Alloc><class _InputIterator, class _Tp, class _Allocator>(_InputIterator __first, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, _InputIterator>::type __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (_InputIterator, _InputIterator, const std::vector::allocator_type &, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value>::type *)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#S0_#&1t0.1#*^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>:::type#v#",
+              "signature": "void vector<_Tp, _Alloc><class _InputIterator, class _Tp, class _Allocator>(_InputIterator __first, _InputIterator __last, const std::vector::allocator_type & __a, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (_ForwardIterator, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, _ForwardIterator>::type)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, type-parameter-1-0>:::type#v#",
+              "signature": "void vector<_Tp, _Alloc><class _ForwardIterator, class _Tp, class _Allocator>(_ForwardIterator __first, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, _ForwardIterator>::type __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (_ForwardIterator, _ForwardIterator, const std::vector::allocator_type &, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value>::type *)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tvector#t1.0#S0_#&1t0.1#*^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>:::type#v#",
+              "signature": "void vector<_Tp, _Alloc><class _ForwardIterator, class _Tp, class _Allocator>(_ForwardIterator __first, _ForwardIterator __last, const std::vector::allocator_type & __a, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value>::type * )"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (const vector<_Tp, _Alloc> &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+              "signature": "void vector<_Tp, _Alloc>(const vector<_Tp, _Alloc> & __x)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (const vector<_Tp, _Alloc> &, const std::vector::allocator_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#&1S4_#",
+              "signature": "void vector<_Tp, _Alloc>(const vector<_Tp, _Alloc> & __x, const std::vector::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (vector<_Tp, _Alloc> &&) noexcept(is_nothrow_move_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+              "signature": "void vector<_Tp, _Alloc>(vector<_Tp, _Alloc> && __x)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (vector<_Tp, _Alloc> &&, const std::vector::allocator_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#&1S4_#",
+              "signature": "void vector<_Tp, _Alloc>(vector<_Tp, _Alloc> && __x, const std::vector::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (initializer_list<std::vector::value_type>)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#>@N@std@ST>1#T@initializer_list1t0.0#",
+              "signature": "void vector<_Tp, _Alloc>(initializer_list<std::vector::value_type> __il)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<_Tp, _Alloc>",
+              "type": "void (initializer_list<std::vector::value_type>, const std::vector::allocator_type &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@vector#>@N@std@ST>1#T@initializer_list1t0.0#&1t0.1#",
+              "signature": "void vector<_Tp, _Alloc>(initializer_list<std::vector::value_type> __il, const std::vector::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<_Tp, _Allocator> &(vector<_Tp, _Alloc> &&) noexcept((__noexcept_move_assign_container<_Allocator, __alloc_traits>::value))",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator=#&&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+              "signature": "vector<_Tp, _Allocator> & operator=(vector<_Tp, _Alloc> && __x);"
+              "args": [
+                "vector<_Tp, _Alloc> &&"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<_Tp, _Allocator> &(const vector<_Tp, _Alloc> &)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator=#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+              "signature": "vector<_Tp, _Allocator> & operator=(const vector<_Tp, _Alloc> & __x);"
+              "args": [
+                "const vector<_Tp, _Alloc> &"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "assign",
+              "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<_Tp, typename iterator_traits<_InputIterator>::reference>::value, void>::type (_InputIterator, _InputIterator)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tassign#t1.0#S0_#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>:::type#",
+              "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<_Tp, typename iterator_traits<_InputIterator>::reference>::value, void>::type assign<class _InputIterator, class _Tp, class _Allocator>(_InputIterator __first, _InputIterator __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "assign",
+              "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<_Tp, typename iterator_traits<_ForwardIterator>::reference>::value, void>::type (_ForwardIterator, _ForwardIterator)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tassign#t1.0#S0_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>:::type#",
+              "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<_Tp, typename iterator_traits<_ForwardIterator>::reference>::value, void>::type assign<class _ForwardIterator, class _Tp, class _Allocator>(_ForwardIterator __first, _ForwardIterator __last)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "assign",
+              "type": "void (std::vector::size_type, std::vector::const_reference)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@assign#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+              "signature": "void assign(std::vector::size_type __n, std::vector::const_reference __u);"
+              "args": [
+                "std::vector::size_type"                ,                
+                "std::vector::const_reference"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "begin",
+              "type": "typename vector<_Tp, _Allocator>::iterator () noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@begin#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator begin();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "begin",
+              "type": "typename vector<_Tp, _Allocator>::const_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@begin#1",
+              "signature": "typename vector<_Tp, _Allocator>::const_iterator begin() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "end",
+              "type": "typename vector<_Tp, _Allocator>::iterator () noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@end#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator end();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "end",
+              "type": "typename vector<_Tp, _Allocator>::const_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@end#1",
+              "signature": "typename vector<_Tp, _Allocator>::const_iterator end() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator[]",
+              "type": "typename vector<_Tp, _Allocator>::reference (std::vector::size_type) noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator[]#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+              "signature": "typename vector<_Tp, _Allocator>::reference operator[](std::vector::size_type __n);"
+              "args": [
+                "std::vector::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator[]",
+              "type": "typename vector<_Tp, _Allocator>::const_reference (std::vector::size_type) const noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@operator[]#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#1",
+              "signature": "typename vector<_Tp, _Allocator>::const_reference operator[](std::vector::size_type __n) const;"
+              "args": [
+                "std::vector::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "at",
+              "type": "typename vector<_Tp, _Allocator>::reference (std::vector::size_type)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@at#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+              "signature": "typename vector<_Tp, _Allocator>::reference at(std::vector::size_type __n);"
+              "args": [
+                "std::vector::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "at",
+              "type": "typename vector<_Tp, _Allocator>::const_reference (std::vector::size_type) const",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@at#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#1",
+              "signature": "typename vector<_Tp, _Allocator>::const_reference at(std::vector::size_type __n) const;"
+              "args": [
+                "std::vector::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "reserve",
+              "type": "void (std::vector::size_type)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@reserve#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+              "signature": "void reserve(std::vector::size_type __n);"
+              "args": [
+                "std::vector::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "shrink_to_fit",
+              "type": "void () noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@shrink_to_fit#",
+              "signature": "void shrink_to_fit();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "push_back",
+              "type": "void (std::vector::const_reference)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@push_back#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+              "signature": "void push_back(std::vector::const_reference __x);"
+              "args": [
+                "std::vector::const_reference"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "push_back",
+              "type": "void (std::vector::value_type &&)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@push_back#&&t0.0#",
+              "signature": "void push_back(std::vector::value_type && __x);"
+              "args": [
+                "std::vector::value_type &&"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "emplace_back",
+              "type": "void (_Args &&...)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#pTemplace_back#P&&t1.0#v#",
+              "signature": "void emplace_back<class _Args, class _Tp, class _Allocator>(_Args &&... __args)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "pop_back",
+              "type": "void ()",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@pop_back#",
+              "signature": "void pop_back();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "erase",
+              "type": "typename vector<_Tp, _Allocator>::iterator (std::vector::const_iterator)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@erase#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator erase(std::vector::const_iterator __position);"
+              "args": [
+                "std::vector::const_iterator"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "erase",
+              "type": "typename vector<_Tp, _Allocator>::iterator (std::vector::const_iterator, std::vector::const_iterator)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@erase#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#S0_#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator erase(std::vector::const_iterator __first, std::vector::const_iterator __last);"
+              "args": [
+                "std::vector::const_iterator"                ,                
+                "std::vector::const_iterator"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "typename vector<_Tp, _Allocator>::iterator (std::vector::const_iterator, std::vector::const_reference)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator insert(std::vector::const_iterator __position, std::vector::const_reference __x);"
+              "args": [
+                "std::vector::const_iterator"                ,                
+                "std::vector::const_reference"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "typename vector<_Tp, _Allocator>::iterator (std::vector::const_iterator, std::vector::value_type &&)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#&&t0.0#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator insert(std::vector::const_iterator __position, std::vector::value_type && __x);"
+              "args": [
+                "std::vector::const_iterator"                ,                
+                "std::vector::value_type &&"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "emplace",
+              "type": "typename vector<_Tp, _Allocator>::iterator (std::vector::const_iterator, _Args &&...)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#pTemplace#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#P&&t1.0#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::pointer#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator emplace<class _Args, class _Tp, class _Allocator>(std::vector::const_iterator __position, _Args &&... __args)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "typename vector<_Tp, _Allocator>::iterator (std::vector::const_iterator, std::vector::size_type, std::vector::const_reference)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@insert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+              "signature": "typename vector<_Tp, _Allocator>::iterator insert(std::vector::const_iterator __position, std::vector::size_type __n, std::vector::const_reference __x);"
+              "args": [
+                "std::vector::const_iterator"                ,                
+                "std::vector::size_type"                ,                
+                "std::vector::const_reference"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "insert",
+              "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<_Tp, typename iterator_traits<_InputIterator>::reference>::value, typename vector<_Tp, _Allocator>::iterator>::type (std::vector::const_iterator, _InputIterator, _InputIterator)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tinsert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#t1.0#S2_#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, __wrap_iter<typename __vector_base<type-parameter-0-0, type-parameter-0-1>::pointer>>:::type#",
+              "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value && is_constructible<_Tp, typename iterator_traits<_InputIterator>::reference>::value, typename vector<_Tp, _Allocator>::iterator>::type insert<class _InputIterator, class _Tp, class _Allocator>(std::vector::const_iterator __position, _InputIterator __first, _InputIterator __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "insert",
+              "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<_Tp, typename iterator_traits<_ForwardIterator>::reference>::value, typename vector<_Tp, _Allocator>::iterator>::type (std::vector::const_iterator, _ForwardIterator, _ForwardIterator)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@FT@>1#Tinsert#>@N@std@N@__1@ST>1#T@__wrap_iter1^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_pointer#t1.0#S2_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, __wrap_iter<typename __vector_base<type-parameter-0-0, type-parameter-0-1>::pointer>>:::type#",
+              "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value && is_constructible<_Tp, typename iterator_traits<_ForwardIterator>::reference>::value, typename vector<_Tp, _Allocator>::iterator>::type insert<class _ForwardIterator, class _Tp, class _Allocator>(std::vector::const_iterator __position, _ForwardIterator __first, _ForwardIterator __last)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "resize",
+              "type": "void (std::vector::size_type)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@resize#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#",
+              "signature": "void resize(std::vector::size_type __sz);"
+              "args": [
+                "std::vector::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "resize",
+              "type": "void (std::vector::size_type, std::vector::const_reference)",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@resize#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::size_type#^__vector_base<type-parameter-0-0, type-parameter-0-1>:::const_reference#",
+              "signature": "void resize(std::vector::size_type __sz, std::vector::const_reference __x);"
+              "args": [
+                "std::vector::size_type"                ,                
+                "std::vector::const_reference"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "swap",
+              "type": "void (vector<_Tp, _Alloc> &) noexcept",
+              "usr": "c:@N@std@N@__1@ST>2#T#T@vector@F@swap#&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#",
+              "signature": "void swap(vector<_Tp, _Alloc> & __x);"
+              "args": [
+                "vector<_Tp, _Alloc> &"                
+              ]
+            },
+            {
+              "kind": "VarDecl",
+              "name": "value",
+              "type": "const bool",
+              "usr": "c:@N@std@N@__1@SP>1#T@__has_storage_type>#>@N@std@N@__1@ST>2#T#T@vector2bt0.0@value",
+              "signature": "const bool value"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__self",
+              "type": "std::vector<bool, type-parameter-0-0>::__self",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__self",
+              "signature": "std::vector<bool, type-parameter-0-0>::__self __self"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "value_type",
+              "type": "std::vector<bool, type-parameter-0-0>::value_type",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@value_type",
+              "signature": "std::vector<bool, type-parameter-0-0>::value_type value_type"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "allocator_type",
+              "type": "std::vector<bool, type-parameter-0-0>::allocator_type",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@allocator_type",
+              "signature": "std::vector<bool, type-parameter-0-0>::allocator_type allocator_type"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__alloc_traits",
+              "type": "std::vector<bool, type-parameter-0-0>::__alloc_traits",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__alloc_traits",
+              "signature": "std::vector<bool, type-parameter-0-0>::__alloc_traits __alloc_traits"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "size_type",
+              "type": "std::vector<bool, type-parameter-0-0>::size_type",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@size_type",
+              "signature": "std::vector<bool, type-parameter-0-0>::size_type size_type"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "difference_type",
+              "type": "std::vector<bool, type-parameter-0-0>::difference_type",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@difference_type",
+              "signature": "std::vector<bool, type-parameter-0-0>::difference_type difference_type"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__storage_type",
+              "type": "std::vector<bool, type-parameter-0-0>::__storage_type",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__storage_type",
+              "signature": "std::vector<bool, type-parameter-0-0>::__storage_type __storage_type"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "pointer",
+              "type": "std::vector<bool, type-parameter-0-0>::pointer",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@pointer",
+              "signature": "std::vector<bool, type-parameter-0-0>::pointer pointer"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "const_pointer",
+              "type": "std::vector<bool, type-parameter-0-0>::const_pointer",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@const_pointer",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_pointer const_pointer"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "iterator",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@iterator",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator iterator"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "const_iterator",
+              "type": "std::vector<bool, type-parameter-0-0>::const_iterator",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@const_iterator",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_iterator const_iterator"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "reverse_iterator",
+              "type": "std::vector<bool, type-parameter-0-0>::reverse_iterator",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@reverse_iterator",
+              "signature": "std::vector<bool, type-parameter-0-0>::reverse_iterator reverse_iterator"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "const_reverse_iterator",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@const_reverse_iterator",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator const_reverse_iterator"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__storage_allocator",
+              "type": "std::vector<bool, type-parameter-0-0>::__storage_allocator",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__storage_allocator",
+              "signature": "std::vector<bool, type-parameter-0-0>::__storage_allocator __storage_allocator"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__storage_traits",
+              "type": "std::vector<bool, type-parameter-0-0>::__storage_traits",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__storage_traits",
+              "signature": "std::vector<bool, type-parameter-0-0>::__storage_traits __storage_traits"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__storage_pointer",
+              "type": "std::vector<bool, type-parameter-0-0>::__storage_pointer",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__storage_pointer",
+              "signature": "std::vector<bool, type-parameter-0-0>::__storage_pointer __storage_pointer"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "__const_storage_pointer",
+              "type": "std::vector<bool, type-parameter-0-0>::__const_storage_pointer",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@__const_storage_pointer",
+              "signature": "std::vector<bool, type-parameter-0-0>::__const_storage_pointer __const_storage_pointer"
+            },
+            {
+              "kind": "FieldDecl",
+              "name": "__begin_",
+              "type": "std::vector<bool, type-parameter-0-0>::__storage_pointer",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FI@__begin_",
+              "signature": "std::vector<bool, type-parameter-0-0>::__storage_pointer __begin_"
+            },
+            {
+              "kind": "FieldDecl",
+              "name": "__size_",
+              "type": "std::vector<bool, type-parameter-0-0>::size_type",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FI@__size_",
+              "signature": "std::vector<bool, type-parameter-0-0>::size_type __size_"
+            },
+            {
+              "kind": "FieldDecl",
+              "name": "__cap_alloc_",
+              "type": "__compressed_pair<std::vector<bool, type-parameter-0-0>::size_type, std::vector<bool, type-parameter-0-0>::__storage_allocator>",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FI@__cap_alloc_",
+              "signature": "__compressed_pair<std::vector<bool, type-parameter-0-0>::size_type, std::vector<bool, type-parameter-0-0>::__storage_allocator> __cap_alloc_"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "reference",
+              "type": "std::vector<bool, type-parameter-0-0>::reference",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@reference",
+              "signature": "std::vector<bool, type-parameter-0-0>::reference reference"
+            },
+            {
+              "kind": "TypedefDecl",
+              "name": "const_reference",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reference",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@T@const_reference",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reference const_reference"
+            },
+            {
+              "kind": "VarDecl",
+              "name": "__bits_per_word",
+              "type": "const unsigned int",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@__bits_per_word",
+              "signature": "const unsigned int __bits_per_word"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void () noexcept(is_nothrow_default_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#",
+              "signature": "void vector<bool, type-parameter-0-0>()"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (const std::vector<bool, type-parameter-0-0>::allocator_type &) noexcept(is_nothrow_copy_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#&1b#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __v)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#&1b#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __v, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_InputIterator, _InputIterator, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#*^enable_if<__is_cpp17_input_iterator<_InputIter>::value && !__is_cpp17_forward_iterator<_InputIter>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _InputIterator>(_InputIterator __first, _InputIterator __last, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_InputIterator, _InputIterator, const std::vector<bool, type-parameter-0-0>::allocator_type &, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#&1S0_#*^enable_if<__is_cpp17_input_iterator<_InputIter>::value && !__is_cpp17_forward_iterator<_InputIter>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _InputIterator>(_InputIterator __first, _InputIterator __last, const std::vector<bool, type-parameter-0-0>::allocator_type & __a, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_ForwardIterator, _ForwardIterator, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#*^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _ForwardIterator>(_ForwardIterator __first, _ForwardIterator __last, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_ForwardIterator, _ForwardIterator, const std::vector<bool, type-parameter-0-0>::allocator_type &, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#&1S0_#*^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _ForwardIterator>(_ForwardIterator __first, _ForwardIterator __last, const std::vector<bool, type-parameter-0-0>::allocator_type & __a, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type * )"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (const vector<bool, type-parameter-0-0> &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(const vector<bool, type-parameter-0-0> & __v)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (const vector<bool, type-parameter-0-0> &, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2bS0_#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(const vector<bool, type-parameter-0-0> & __v, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<bool, type-parameter-0-0> &(const vector<bool, type-parameter-0-0> &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator=#&1>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "vector<bool, type-parameter-0-0> & operator=(const vector<bool, type-parameter-0-0> & __v);"
+              "args": [
+                "const vector<bool, type-parameter-0-0> &"                
+              ]
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (initializer_list<std::vector<bool, type-parameter-0-0>::value_type>)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#$@N@std@S@initializer_list>#b#",
+              "signature": "void vector<bool, type-parameter-0-0>(initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (initializer_list<std::vector<bool, type-parameter-0-0>::value_type>, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#$@N@std@S@initializer_list>#b#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (vector<bool, type-parameter-0-0> &&) noexcept(is_nothrow_move_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(vector<bool, type-parameter-0-0> && __v)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (vector<bool, type-parameter-0-0> &&, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2bS0_#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(vector<bool, type-parameter-0-0> && __v, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<bool, type-parameter-0-0> &(vector<bool, type-parameter-0-0> &&) noexcept((__noexcept_move_assign_container<_Allocator, __alloc_traits>::value))",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator=#&&>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "vector<bool, type-parameter-0-0> & operator=(vector<bool, type-parameter-0-0> && __v);"
+              "args": [
+                "vector<bool, type-parameter-0-0> &&"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<bool, type-parameter-0-0> &(initializer_list<std::vector<bool, type-parameter-0-0>::value_type>)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator=#$@N@std@S@initializer_list>#b#",
+              "signature": "vector<bool, type-parameter-0-0> & operator=(initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il);"
+              "args": [
+                "initializer_list<std::vector<bool, type-parameter-0-0>::value_type>"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "assign",
+              "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, void>::type (_InputIterator, _InputIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tassign#t1.0#S1_#^enable_if<__is_cpp17_input_iterator<_InputIter>::value && !__is_cpp17_forward_iterator<_InputIter>::value, void>:::type#",
+              "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, void>::type assign<class _InputIterator>(_InputIterator __first, _InputIterator __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "assign",
+              "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>::type (_ForwardIterator, _ForwardIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tassign#t1.0#S1_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>:::type#",
+              "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>::type assign<class _ForwardIterator>(_ForwardIterator __first, _ForwardIterator __last)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "assign",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@assign#^allocator_traits<type-parameter-0-0>:::size_type#&1b#",
+              "signature": "void assign(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "assign",
+              "type": "void (initializer_list<std::vector<bool, type-parameter-0-0>::value_type>)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@assign#$@N@std@S@initializer_list>#b#",
+              "signature": "void assign(initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il);"
+              "args": [
+                "initializer_list<std::vector<bool, type-parameter-0-0>::value_type>"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "get_allocator",
+              "type": "std::vector<bool, type-parameter-0-0>::allocator_type () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@get_allocator#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::allocator_type get_allocator() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "max_size",
+              "type": "std::vector<bool, type-parameter-0-0>::size_type () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@max_size#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::size_type max_size() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "capacity",
+              "type": "std::vector<bool, type-parameter-0-0>::size_type () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@capacity#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::size_type capacity() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "size",
+              "type": "std::vector<bool, type-parameter-0-0>::size_type () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@size#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::size_type size() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "empty",
+              "type": "bool () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@empty#1",
+              "signature": "bool empty() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "reserve",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@reserve#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "void reserve(std::vector<bool, type-parameter-0-0>::size_type __n);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "shrink_to_fit",
+              "type": "void () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@shrink_to_fit#",
+              "signature": "void shrink_to_fit();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "begin",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@begin#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator begin();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "begin",
+              "type": "std::vector<bool, type-parameter-0-0>::const_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@begin#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_iterator begin() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "end",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@end#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator end();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "end",
+              "type": "std::vector<bool, type-parameter-0-0>::const_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@end#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_iterator end() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "rbegin",
+              "type": "std::vector<bool, type-parameter-0-0>::reverse_iterator () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@rbegin#",
+              "signature": "std::vector<bool, type-parameter-0-0>::reverse_iterator rbegin();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "rbegin",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@rbegin#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator rbegin() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "rend",
+              "type": "std::vector<bool, type-parameter-0-0>::reverse_iterator () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@rend#",
+              "signature": "std::vector<bool, type-parameter-0-0>::reverse_iterator rend();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "rend",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@rend#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator rend() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "cbegin",
+              "type": "std::vector<bool, type-parameter-0-0>::const_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@cbegin#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_iterator cbegin() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "cend",
+              "type": "std::vector<bool, type-parameter-0-0>::const_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@cend#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_iterator cend() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "crbegin",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@crbegin#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator crbegin() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "crend",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@crend#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reverse_iterator crend() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator[]",
+              "type": "std::vector<bool, type-parameter-0-0>::reference (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator[]#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "std::vector<bool, type-parameter-0-0>::reference operator[](std::vector<bool, type-parameter-0-0>::size_type __n);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator[]",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reference (std::vector<bool, type-parameter-0-0>::size_type) const",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator[]#^allocator_traits<type-parameter-0-0>:::size_type#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reference operator[](std::vector<bool, type-parameter-0-0>::size_type __n) const;"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "at",
+              "type": "std::vector<bool, type-parameter-0-0>::reference (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@at#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "std::vector<bool, type-parameter-0-0>::reference at(std::vector<bool, type-parameter-0-0>::size_type __n);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "at",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reference (std::vector<bool, type-parameter-0-0>::size_type) const",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@at#^allocator_traits<type-parameter-0-0>:::size_type#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reference at(std::vector<bool, type-parameter-0-0>::size_type __n) const;"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "front",
+              "type": "std::vector<bool, type-parameter-0-0>::reference ()",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@front#",
+              "signature": "std::vector<bool, type-parameter-0-0>::reference front();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "front",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reference () const",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@front#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reference front() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "back",
+              "type": "std::vector<bool, type-parameter-0-0>::reference ()",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@back#",
+              "signature": "std::vector<bool, type-parameter-0-0>::reference back();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "back",
+              "type": "std::vector<bool, type-parameter-0-0>::const_reference () const",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@back#1",
+              "signature": "std::vector<bool, type-parameter-0-0>::const_reference back() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "push_back",
+              "type": "void (const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@push_back#&1b#",
+              "signature": "void push_back(const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "emplace_back",
+              "type": "void (_Args &&...)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#pTemplace_back#P&&t1.0#v#",
+              "signature": "void emplace_back<class _Args>(_Args &&... __args)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "pop_back",
+              "type": "void ()",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@pop_back#",
+              "signature": "void pop_back();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "emplace",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, _Args &&...)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#pTemplace#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#P&&t1.0#>@N@std@N@__1@ST>3#T#Nb#NS2_@__bit_iterator3S3_Vb0#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator emplace<class _Args>(std::vector<bool, type-parameter-0-0>::const_iterator position, _Args &&... __args)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@insert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#&1b#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator insert(std::vector<bool, type-parameter-0-0>::const_iterator __position, const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@insert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#^allocator_traits<type-parameter-0-0>:::size_type#&1b#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator insert(std::vector<bool, type-parameter-0-0>::const_iterator __position, std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, std::vector<bool, type-parameter-0-0>::size_type, std::vector<bool, type-parameter-0-0>::const_reference)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@insert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#^allocator_traits<type-parameter-0-0>:::size_type#>@N@std@N@__1@ST>1#T@__bit_const_reference1S3_#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator insert(std::vector<bool, type-parameter-0-0>::const_iterator __position, std::vector<bool, type-parameter-0-0>::size_type __n, std::vector<bool, type-parameter-0-0>::const_reference __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "std::vector<bool, type-parameter-0-0>::const_reference"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "insert",
+              "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, iterator>::type (std::vector<bool, type-parameter-0-0>::const_iterator, _InputIterator, _InputIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tinsert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#t1.0#S5_#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, __bit_iterator<vector<bool, type-parameter-0-0>, false, 0>>:::type#",
+              "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, iterator>::type insert<class _InputIterator>(std::vector<bool, type-parameter-0-0>::const_iterator __position, _InputIterator __first, _InputIterator __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "insert",
+              "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, iterator>::type (std::vector<bool, type-parameter-0-0>::const_iterator, _ForwardIterator, _ForwardIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tinsert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#t1.0#S5_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, __bit_iterator<vector<bool, type-parameter-0-0>, false, 0>>:::type#",
+              "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, iterator>::type insert<class _ForwardIterator>(std::vector<bool, type-parameter-0-0>::const_iterator __position, _ForwardIterator __first, _ForwardIterator __last)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, initializer_list<std::vector<bool, type-parameter-0-0>::value_type>)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@insert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#$@N@std@S@initializer_list>#b#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator insert(std::vector<bool, type-parameter-0-0>::const_iterator __position, initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "initializer_list<std::vector<bool, type-parameter-0-0>::value_type>"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "erase",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@erase#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator erase(std::vector<bool, type-parameter-0-0>::const_iterator __position);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "erase",
+              "type": "std::vector<bool, type-parameter-0-0>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, std::vector<bool, type-parameter-0-0>::const_iterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@erase#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#S1_#",
+              "signature": "std::vector<bool, type-parameter-0-0>::iterator erase(std::vector<bool, type-parameter-0-0>::const_iterator __first, std::vector<bool, type-parameter-0-0>::const_iterator __last);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "clear",
+              "type": "void () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@clear#",
+              "signature": "void clear();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "swap",
+              "type": "void (vector<bool, type-parameter-0-0> &) noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@swap#&>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "void swap(vector<bool, type-parameter-0-0> & );"
+              "args": [
+                "vector<bool, type-parameter-0-0> &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "swap",
+              "type": "void (std::vector<bool, type-parameter-0-0>::reference, std::vector<bool, type-parameter-0-0>::reference) noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@swap#>@N@std@N@__1@ST>2#T#Nb@__bit_reference2>@N@std@N@__1@ST>2#T#T@vector2bS0_#S1_#S",
+              "signature": "void swap(std::vector<bool, type-parameter-0-0>::reference __x, std::vector<bool, type-parameter-0-0>::reference __y);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::reference"                ,                
+                "std::vector<bool, type-parameter-0-0>::reference"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "resize",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, std::vector<bool, type-parameter-0-0>::value_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@resize#^allocator_traits<type-parameter-0-0>:::size_type#b#",
+              "signature": "void resize(std::vector<bool, type-parameter-0-0>::size_type __sz, std::vector<bool, type-parameter-0-0>::value_type __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "std::vector<bool, type-parameter-0-0>::value_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "flip",
+              "type": "void () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@flip#",
+              "signature": "void flip();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "max_size",
+              "type": "typename vector<bool, _Allocator>::size_type () const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@max_size#1",
+              "signature": "typename vector<bool, _Allocator>::size_type max_size() const;"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void () noexcept(is_nothrow_default_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#",
+              "signature": "void vector<bool, type-parameter-0-0>()"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (const std::vector<bool, type-parameter-0-0>::allocator_type &) noexcept(is_nothrow_copy_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#&1b#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __x)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#^allocator_traits<type-parameter-0-0>:::size_type#&1b#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __x, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_InputIterator, _InputIterator, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#*^enable_if<__is_cpp17_input_iterator<_InputIter>::value && !__is_cpp17_forward_iterator<_InputIter>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _InputIterator, class _Allocator>(_InputIterator __first, _InputIterator __last, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_InputIterator, _InputIterator, const std::vector<bool, type-parameter-0-0>::allocator_type &, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#&1S0_#*^enable_if<__is_cpp17_input_iterator<_InputIter>::value && !__is_cpp17_forward_iterator<_InputIter>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _InputIterator, class _Allocator>(_InputIterator __first, _InputIterator __last, const std::vector<bool, type-parameter-0-0>::allocator_type & __a, typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_ForwardIterator, _ForwardIterator, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#*^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _ForwardIterator, class _Allocator>(_ForwardIterator __first, _ForwardIterator __last, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type * )"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (_ForwardIterator, _ForwardIterator, const std::vector<bool, type-parameter-0-0>::allocator_type &, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type *)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tvector#t1.0#S1_#&1S0_#*^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>:::type#v#",
+              "signature": "void vector<bool, type-parameter-0-0><class _ForwardIterator, class _Allocator>(_ForwardIterator __first, _ForwardIterator __last, const std::vector<bool, type-parameter-0-0>::allocator_type & __a, typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value>::type * )"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (initializer_list<std::vector<bool, type-parameter-0-0>::value_type>)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#$@N@std@S@initializer_list>#b#",
+              "signature": "void vector<bool, type-parameter-0-0>(initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (initializer_list<std::vector<bool, type-parameter-0-0>::value_type>, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#$@N@std@S@initializer_list>#b#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(initializer_list<std::vector<bool, type-parameter-0-0>::value_type> __il, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (const vector<bool, type-parameter-0-0> &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(const vector<bool, type-parameter-0-0> & __v)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (const vector<bool, type-parameter-0-0> &, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&1>@N@std@N@__1@ST>2#T#T@vector2bS0_#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(const vector<bool, type-parameter-0-0> & __v, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<bool, _Allocator> &(const vector<bool, type-parameter-0-0> &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator=#&1>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "vector<bool, _Allocator> & operator=(const vector<bool, type-parameter-0-0> & __v);"
+              "args": [
+                "const vector<bool, type-parameter-0-0> &"                
+              ]
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (vector<bool, type-parameter-0-0> &&) noexcept(is_nothrow_move_constructible<allocator_type>::value)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(vector<bool, type-parameter-0-0> && __v)"
+            },
+            {
+              "kind": "CXXConstructor",
+              "name": "vector<bool, type-parameter-0-0>",
+              "type": "void (vector<bool, type-parameter-0-0> &&, const std::vector<bool, type-parameter-0-0>::allocator_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@vector#&&>@N@std@N@__1@ST>2#T#T@vector2bS0_#&1S0_#",
+              "signature": "void vector<bool, type-parameter-0-0>(vector<bool, type-parameter-0-0> && __v, const std::vector<bool, type-parameter-0-0>::allocator_type & __a)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator=",
+              "type": "vector<bool, _Allocator> &(vector<bool, type-parameter-0-0> &&) noexcept((__noexcept_move_assign_container<_Allocator, __alloc_traits>::value))",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@operator=#&&>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "vector<bool, _Allocator> & operator=(vector<bool, type-parameter-0-0> && __v);"
+              "args": [
+                "vector<bool, type-parameter-0-0> &&"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "assign",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@assign#^allocator_traits<type-parameter-0-0>:::size_type#&1b#",
+              "signature": "void assign(std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "assign",
+              "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, void>::type (_InputIterator, _InputIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tassign#t1.0#S1_#^enable_if<__is_cpp17_input_iterator<_InputIter>::value && !__is_cpp17_forward_iterator<_InputIter>::value, void>:::type#",
+              "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, void>::type assign<class _InputIterator, class _Allocator>(_InputIterator __first, _InputIterator __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "assign",
+              "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>::type (_ForwardIterator, _ForwardIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tassign#t1.0#S1_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>:::type#",
+              "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, void>::type assign<class _ForwardIterator, class _Allocator>(_ForwardIterator __first, _ForwardIterator __last)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "reserve",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@reserve#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "void reserve(std::vector<bool, type-parameter-0-0>::size_type __n);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "shrink_to_fit",
+              "type": "void () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@shrink_to_fit#",
+              "signature": "void shrink_to_fit();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "at",
+              "type": "typename vector<bool, _Allocator>::reference (std::vector<bool, type-parameter-0-0>::size_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@at#^allocator_traits<type-parameter-0-0>:::size_type#",
+              "signature": "typename vector<bool, _Allocator>::reference at(std::vector<bool, type-parameter-0-0>::size_type __n);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "at",
+              "type": "typename vector<bool, _Allocator>::const_reference (std::vector<bool, type-parameter-0-0>::size_type) const",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@at#^allocator_traits<type-parameter-0-0>:::size_type#1",
+              "signature": "typename vector<bool, _Allocator>::const_reference at(std::vector<bool, type-parameter-0-0>::size_type __n) const;"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "push_back",
+              "type": "void (const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@push_back#&1b#",
+              "signature": "void push_back(const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "typename vector<bool, _Allocator>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@insert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#&1b#",
+              "signature": "typename vector<bool, _Allocator>::iterator insert(std::vector<bool, type-parameter-0-0>::const_iterator __position, const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "insert",
+              "type": "typename vector<bool, _Allocator>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, std::vector<bool, type-parameter-0-0>::size_type, const std::vector<bool, type-parameter-0-0>::value_type &)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@insert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#^allocator_traits<type-parameter-0-0>:::size_type#&1b#",
+              "signature": "typename vector<bool, _Allocator>::iterator insert(std::vector<bool, type-parameter-0-0>::const_iterator __position, std::vector<bool, type-parameter-0-0>::size_type __n, const std::vector<bool, type-parameter-0-0>::value_type & __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "const std::vector<bool, type-parameter-0-0>::value_type &"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "insert",
+              "type": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, typename vector<bool, _Allocator>::iterator>::type (std::vector<bool, type-parameter-0-0>::const_iterator, _InputIterator, _InputIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tinsert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#t1.0#S5_#^enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, __bit_iterator<vector<bool, type-parameter-0-0>, false, 0>>:::type#",
+              "signature": "typename enable_if<__is_cpp17_input_iterator<_InputIterator>::value && !__is_cpp17_forward_iterator<_InputIterator>::value, typename vector<bool, _Allocator>::iterator>::type insert<class _InputIterator, class _Allocator>(std::vector<bool, type-parameter-0-0>::const_iterator __position, _InputIterator __first, _InputIterator __last)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "insert",
+              "type": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, typename vector<bool, _Allocator>::iterator>::type (std::vector<bool, type-parameter-0-0>::const_iterator, _ForwardIterator, _ForwardIterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@FT@>1#Tinsert#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#t1.0#S5_#^enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, __bit_iterator<vector<bool, type-parameter-0-0>, false, 0>>:::type#",
+              "signature": "typename enable_if<__is_cpp17_forward_iterator<_ForwardIterator>::value, typename vector<bool, _Allocator>::iterator>::type insert<class _ForwardIterator, class _Allocator>(std::vector<bool, type-parameter-0-0>::const_iterator __position, _ForwardIterator __first, _ForwardIterator __last)"
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "erase",
+              "type": "typename vector<bool, _Allocator>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@erase#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#",
+              "signature": "typename vector<bool, _Allocator>::iterator erase(std::vector<bool, type-parameter-0-0>::const_iterator __position);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "erase",
+              "type": "typename vector<bool, _Allocator>::iterator (std::vector<bool, type-parameter-0-0>::const_iterator, std::vector<bool, type-parameter-0-0>::const_iterator)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@erase#>@N@std@N@__1@ST>3#T#Nb#N^type-parameter-0-0:::__storage_type@__bit_iterator3>@N@std@N@__1@ST>2#T#T@vector2bS0_Vb1#S1_#",
+              "signature": "typename vector<bool, _Allocator>::iterator erase(std::vector<bool, type-parameter-0-0>::const_iterator __first, std::vector<bool, type-parameter-0-0>::const_iterator __last);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                ,                
+                "std::vector<bool, type-parameter-0-0>::const_iterator"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "swap",
+              "type": "void (vector<bool, type-parameter-0-0> &) noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@swap#&>@N@std@N@__1@ST>2#T#T@vector2bS0_#",
+              "signature": "void swap(vector<bool, type-parameter-0-0> & __x);"
+              "args": [
+                "vector<bool, type-parameter-0-0> &"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "resize",
+              "type": "void (std::vector<bool, type-parameter-0-0>::size_type, std::vector<bool, type-parameter-0-0>::value_type)",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@resize#^allocator_traits<type-parameter-0-0>:::size_type#b#",
+              "signature": "void resize(std::vector<bool, type-parameter-0-0>::size_type __sz, std::vector<bool, type-parameter-0-0>::value_type __x);"
+              "args": [
+                "std::vector<bool, type-parameter-0-0>::size_type"                ,                
+                "std::vector<bool, type-parameter-0-0>::value_type"                
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "flip",
+              "type": "void () noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@vector>#b#t0.0@F@flip#",
+              "signature": "void flip();"
+              "args": [
+              ]
+            },
+            {
+              "kind": "CXXMethod",
+              "name": "operator()",
+              "type": "size_t (const vector<bool, _Allocator> &) const noexcept",
+              "usr": "c:@N@std@N@__1@SP>1#T@hash>#>@N@std@N@__1@ST>2#T#T@vector2bt0.0@F@operator()#&1S0_#1",
+              "signature": "size_t operator()(const vector<bool, _Allocator> & __vec) const;"
+              "args": [
+                "const vector<bool, _Allocator> &"                
+              ]
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "operator==",
+              "type": "bool (const vector<_Tp, _Allocator> &, const vector<_Tp, _Allocator> &)",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Toperator==#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#b#",
+              "signature": "bool operator==<class _Tp, class _Allocator>(const vector<_Tp, _Allocator> & __x, const vector<_Tp, _Allocator> & __y)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "operator!=",
+              "type": "bool (const vector<_Tp, _Allocator> &, const vector<_Tp, _Allocator> &)",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Toperator!=#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#b#",
+              "signature": "bool operator!=<class _Tp, class _Allocator>(const vector<_Tp, _Allocator> & __x, const vector<_Tp, _Allocator> & __y)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "operator<",
+              "type": "bool (const vector<_Tp, _Allocator> &, const vector<_Tp, _Allocator> &)",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Toperator<#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#b#",
+              "signature": "bool operator<<class _Tp, class _Allocator>(const vector<_Tp, _Allocator> & __x, const vector<_Tp, _Allocator> & __y)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "operator>",
+              "type": "bool (const vector<_Tp, _Allocator> &, const vector<_Tp, _Allocator> &)",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Toperator>#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#b#",
+              "signature": "bool operator><class _Tp, class _Allocator>(const vector<_Tp, _Allocator> & __x, const vector<_Tp, _Allocator> & __y)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "operator>=",
+              "type": "bool (const vector<_Tp, _Allocator> &, const vector<_Tp, _Allocator> &)",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Toperator>=#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#b#",
+              "signature": "bool operator>=<class _Tp, class _Allocator>(const vector<_Tp, _Allocator> & __x, const vector<_Tp, _Allocator> & __y)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "operator<=",
+              "type": "bool (const vector<_Tp, _Allocator> &, const vector<_Tp, _Allocator> &)",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Toperator<=#&1>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#b#",
+              "signature": "bool operator<=<class _Tp, class _Allocator>(const vector<_Tp, _Allocator> & __x, const vector<_Tp, _Allocator> & __y)"
+            },
+            {
+              "kind": "FunctionTemplate",
+              "name": "swap",
+              "type": "void (vector<_Tp, _Allocator> &, vector<_Tp, _Allocator> &) noexcept(noexcept(__x.swap(__y)))",
+              "usr": "c:@N@std@N@__1@FT@>2#T#Tswap#&>@N@std@N@__1@ST>2#T#T@vector2t0.0t0.1#S0_#v#",
+              "signature": "void swap<class _Tp, class _Allocator>(vector<_Tp, _Allocator> & __x, vector<_Tp, _Allocator> & __y)"
+            },
+        },
+    },
+    {
       "kind": "FunctionDecl",
       "name": "foo",
       "type": "int (const int *, unsigned long)",
@@ -58,5 +2539,5 @@
         "FancyVec &"        ,        
         "size_t"        
       ]
-    },
-},
+    }
+}
