@@ -125,6 +125,13 @@
           "usr": "c:@N@my@S@Ptr>#I@F@operator[]#l#",
           "location": "sample/fancy_ptr.h:57:8"
         }
+      },
+      "0x00000011": {
+        "label": "",
+        "metadata": {
+          "usr": "",
+          "location": "sample/fancy_ptr.cpp:65:13"
+        }
       }
     },
     "edges": [
@@ -194,6 +201,16 @@
         "target": "0x00000009"
       },
       {
+        "label": "/opt/llvm-13/include/c++/v1/vector:680:40",
+        "source": "0x00000007",
+        "target": "0x00000008"
+      },
+      {
+        "label": "/opt/llvm-13/include/c++/v1/vector:680:55",
+        "source": "0x00000007",
+        "target": "0x00000009"
+      },
+      {
         "label": "sample/fancy_ptr.cpp:58:9",
         "source": "0x0000000a",
         "target": "0x0000000b"
@@ -224,6 +241,16 @@
         "target": "0x0000000d"
       },
       {
+        "label": "/opt/llvm-13/include/c++/v1/vector:407:9",
+        "source": "0x0000000c",
+        "target": "0x0000000d"
+      },
+      {
+        "label": "sample/fancy_ptr.cpp:62:2",
+        "source": "0x0000000e",
+        "target": "0x0000000f"
+      },
+      {
         "label": "sample/fancy_ptr.cpp:62:2",
         "source": "0x0000000e",
         "target": "0x0000000f"
@@ -242,6 +269,26 @@
         "label": "/opt/llvm-13/include/c++/v1/vector:1590:12",
         "source": "0x0000000f",
         "target": "0x00000010"
+      },
+      {
+        "label": "/opt/llvm-13/include/c++/v1/vector:1588:16",
+        "source": "0x0000000f",
+        "target": "0x00000007"
+      },
+      {
+        "label": "/opt/llvm-13/include/c++/v1/vector:1589:9",
+        "source": "0x0000000f",
+        "target": "0x0000000c"
+      },
+      {
+        "label": "/opt/llvm-13/include/c++/v1/vector:1590:12",
+        "source": "0x0000000f",
+        "target": "0x00000010"
+      },
+      {
+        "label": "sample/fancy_ptr.cpp:65:47",
+        "source": "0x00000011",
+        "target": "0x0000000e"
       }
     ]
   }
