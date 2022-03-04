@@ -21,9 +21,40 @@
 
 #include <gtest/gtest.h>
 #include <vector>
+#include "VectorTest.h"
 
-TEST(VectorTest, Clearing) {
-    std::vector<int> vect{1, 2, 3};
-    vect.clear();
-    EXPECT_EQ(vect.empty(), true);
+namespace {
+
+
+template <typename T> 
+::std::vector<T> CreateVector() {
+    TestedVector<T> vectCreator;
+    ::std::vector<T> vect = vectCreator.testedVect;
+    return vect;
+}
+
+template <typename T>
+class VectorTest : public ::testing::Test {
+    protected:
+        VectorTest() { 
+            ::std::vector<T> vect = CreateVector<T>();
+        }
+        ~VectorTest() override {}
+        ::std::vector<T> vect;
+};
+
+using ::testing::Types;
+
+TYPED_TEST_SUITE_P(VectorTest);
+
+TYPED_TEST_P(VectorTest, Clearing) {
+    this->vect.clear();
+    EXPECT_EQ(this->vect.empty(), true);
+}
+
+REGISTER_TYPED_TEST_SUITE_P(
+    VectorTest, 
+    Clearing);
+using TestedTypes = ::testing::Types<int>;
+INSTANTIATE_TYPED_TEST_SUITE_P(VectorTesting, VectorTest, TestedTypes);
 }
