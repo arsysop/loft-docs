@@ -7,5 +7,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # add_executable(first first.cpp)
 # add_executable(fancy_ptr_with_errors fancy_ptr_with_errors.cpp)
-add_library(fancy_ptr fancy_ptr.cpp fancy_ptr.h)
+add_library(fancy_ptr
+        fancy_ptr.cpp
+        fancy_ptr.h
+    )
 

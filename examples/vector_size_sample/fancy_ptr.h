@@ -32,97 +32,151 @@ using std::true_type;
 namespace my {
 
 
-template<class Tp>
-class Ptr;
+template<class Tp> class Ptr;
+template<class Tp> class CPtr;
 
 template<class T>
 struct Ptr {
-    using P = T *;
+	typedef ptrdiff_t difference_type; //almost always ptrdiff_t
+	typedef T value_type; //almost always T
+	typedef T& reference; //almost always T& or const T&
+	typedef const T& const_reference; //almost always T& or const T&
+	typedef T* pointer; //almost always T* or const T*
+	typedef const T* const_pointer; //almost always T* or const T*
+	typedef std::random_access_iterator_tag iterator_category;
+
+	using P = T *;
     T *p_;
 
-    Ptr(nullptr_t) : p_(nullptr) {}
+	Ptr() : p_(nullptr) {}
+	Ptr(nullptr_t) : p_(nullptr) {}
+	Ptr(T* p) : p_(p) {}
 
-    Ptr(T *p) : p_(p) {}
+//	Ptr(const T* p) : p_(const_cast<T*>(p)) {}    //! FIXME
 
-    Ptr(const T *&p) : p_(p) {}
+	Ptr(const Ptr<T>&) = default;
+	Ptr(Ptr<T>&&) = default;
+	Ptr& operator=(const Ptr<T>&) = default;
+	Ptr& operator=(Ptr<T>&&) noexcept = default;
 
-    Ptr(const Ptr<T> &) = default;
+	T& operator[](size_t n) { return *(p_ + n); }
+	const T& operator[](size_t n) const { return *(p_ + n); }
 
-    Ptr(Ptr<T> &&) = default;
+	template<class U>
+	Ptr(Ptr<U> other) : Ptr(static_cast<T*>(other.p_)) {}
 
-    Ptr &operator=(const Ptr<T> &) = default;
+	T* operator->() { return p_; }
+//	const T* operator->() const { return p_; }
+	T* operator->() const { return p_; }
 
-    Ptr &operator=(Ptr<T> &&) = default;
+	T& operator*() { return *p_; }
+	T& operator*() const { return *p_; }
 
-    T &operator[](size_t n) { return *(p_ + n); }
+	bool operator==(const Ptr<T>& other) const { return p_ == other.p_; }
+	bool operator==(const CPtr<T>& other) const { return p_ == other.p_; }
+	bool operator==(nullptr_t) const { return p_ == nullptr; }
 
-    const T &operator[](size_t n) const { return *(p_ + n); }
+	bool operator!=(const Ptr<T>& other) const { return !operator==(other); }
+	bool operator!=(const CPtr<T>& other) const { return !operator==(other); }
+	bool operator!=(nullptr_t) const { return p_ != nullptr; }
 
-    template<class U>
-    Ptr(Ptr<U> other) : Ptr(static_cast<T *>(other.p_)) {}
+	bool operator<(const Ptr<T>& other) const { return p_ < other.p_; }
+	bool operator>(const Ptr<T>& other) const { return p_ > other.p_; }
+	bool operator<=(const Ptr<T>& other) const { return p_ <= other.p_; }
+	bool operator>=(const Ptr<T>& other) const { return p_ >= other.p_; }
 
-    T *operator->() { return p_; }
+	explicit operator bool() const { return operator!=(nullptr); }
 
-    T *operator->() const { return p_; }
+	Ptr& operator++() { ++p_; return *this; }
+	Ptr operator++(int) { Ptr t(*this); ++p_; return t; }
+	Ptr& operator--() { --p_; return *this; }
+	Ptr operator--(int) { Ptr t(*this); --p_; return t; }
 
-    bool operator==(const Ptr<T> other) const { return p_ == other.p_; }
-
-    bool operator==(nullptr_t) const { return p_ == nullptr; }
-
-    bool operator!=(const Ptr<T> other) const { return !operator==(other); }
-
-    bool operator!=(nullptr_t) const { return p_ != nullptr; }
-
-    Ptr &operator++() {
-        ++p_;
-        return *this;
-    }
-
-    Ptr operator++(int) {
-        Ptr t(*this);
-        ++p_;
-        return t;
-    }
-
-    Ptr &operator--() {
-        --p_;
-        return *this;
-    }
-
-    Ptr operator--(int) {
-        Ptr t(*this);
-        --p_;
-        return t;
-    }
-
-    Ptr operator+(size_t n) {
-        return Ptr(p_ + n);
-    }
-
-    Ptr operator-(size_t n) { return Ptr(p_ - n); }
-
+	Ptr operator+(size_t n) const { return Ptr(p_ + n); }
+	Ptr operator-(size_t n) const { return Ptr(p_ - n); }
+	Ptr operator+=(size_t n) const { return *this + n; }
+	Ptr operator-=(size_t n) const { return *this - n; }
 };
-
-
-template<class T>
-ptrdiff_t operator-(const Ptr<T>& a, const Ptr<T> b) {
-    return a.p_ - b.p_;
-}
 
 template<class T>
 struct CPtr {
-    const T *p_;
+	typedef ptrdiff_t difference_type; //almost always ptrdiff_t
+	typedef T value_type; //almost always T
+//	typedef T& reference; //almost always T& or const T&
+	typedef const T& const_reference; //almost always T& or const T&
+//	typedef T* pointer; //almost always T* or const T*
+	typedef const T* const_pointer; //almost always T* or const T*
+	typedef std::random_access_iterator_tag iterator_category;
 
-    CPtr(T *p) : p_(p) {}
+    const T* p_;
 
-    CPtr(Ptr<T> ptr) : CPtr(ptr.p_) {}
+	CPtr() : p_(nullptr) {}
+	CPtr(nullptr_t) : p_(nullptr) {}
+	CPtr(const T* p) : p_(p) {}
 
-    template<class U>
-    CPtr(CPtr<U> other) : CPtr(static_cast<const T *>(other.p_)) {}
+	CPtr(const Ptr<T>& p) : CPtr(p.p_) {}
 
-    const T *operator->() const { return p_; }
+	CPtr(const CPtr<T> &) = default;
+	CPtr(CPtr<T> &&) = default;
+	CPtr& operator=(const CPtr<T>&) = default;
+	CPtr& operator=(CPtr<T>&&) noexcept = default;
+
+//	T& operator[](size_t n) { return *(p_ + n); }
+	const T& operator[](size_t n) const { return *(p_ + n); }
+
+	template<class U>
+	CPtr(CPtr<U> other) : CPtr(static_cast<const T*>(other.p_)) {}
+
+	const T* operator->() { return p_; }
+	const T* operator->() const { return p_; }
+
+	const T& operator*() { return *p_; }
+	const T& operator*() const { return *p_; }
+
+	bool operator==(const CPtr<T>& other) const { return p_ == other.p_; }
+	bool operator==(const Ptr<T>& other) const { return p_ == other.p_; }
+	bool operator==(nullptr_t) const { return p_ == nullptr; }
+
+	bool operator!=(const CPtr<T>& other) const { return !operator==(other); }
+	bool operator!=(const Ptr<T>& other) const { return !operator==(other); }
+	bool operator!=(nullptr_t) const { return p_ != nullptr; }
+
+	bool operator<(const CPtr<T>& other) const { return p_ < other.p_; }
+	bool operator>(const CPtr<T>& other) const { return p_ > other.p_; }
+	bool operator<=(const CPtr<T>& other) const { return p_ <= other.p_; }
+	bool operator>=(const CPtr<T>& other) const { return p_ >= other.p_; }
+
+	explicit operator bool() const { return operator!=(nullptr); }
+
+	CPtr& operator++() { ++p_; return *this; }
+	CPtr operator++(int) { CPtr t(*this); ++p_; return t; }
+	CPtr& operator--() { --p_; return *this; }
+	CPtr operator--(int) { CPtr t(*this); --p_; return t; }
+
+	CPtr operator+(size_t n) const { return CPtr(p_ + n); }
+	CPtr operator-(size_t n) const { return CPtr(p_ - n); }
+	CPtr operator+=(size_t n) const { return *this + n; }
+	CPtr operator-=(size_t n) const { return *this - n; }
+
+	difference_type operator-(const CPtr& p) const { return (p_ - p.p_); }
 };
 
+template <typename T>
+bool operator<(const Ptr<T>& a, const CPtr<T>& b) { return a.p_ < b.p_; }
+
+template <typename T>
+bool operator<(const CPtr<T>& a, const Ptr<T>& b) { return a.p_ < b.p_; }
+
+template <typename T>
+bool operator<=(const Ptr<T>& a, const CPtr<T>& b) { return a.p_ <= b.p_; }
+
+template <typename T>
+bool operator<=(const CPtr<T>& a, const Ptr<T>& b) { return a.p_ <= b.p_; }
+
+template<class T>
+ptrdiff_t operator-(const Ptr<T>& a, const Ptr<T> b) {
+	return a.p_ - b.p_;
+}
 
 template<class Tp>
 class custom_allocator;
@@ -130,14 +184,14 @@ class custom_allocator;
 template<>
 class custom_allocator<void> {
 public:
-    typedef void *pointer;
-    typedef const void *const_pointer;
-    typedef void value_type;
+	typedef void* pointer;
+	typedef const void* const_pointer;
+	typedef void value_type;
 
-    template<class Up>
-    struct rebind {
-        typedef custom_allocator<Up> other;
-    };
+	template<class Up>
+	struct rebind {
+		typedef custom_allocator<Up> other;
+	};
 };
 
 template<class Tp>
@@ -146,10 +200,9 @@ public:
     typedef size_t size_type;
     typedef ptrdiff_t difference_type;
     typedef Ptr<Tp> pointer; // was: typedef Tp *pointer;
-//    typedef const CPtr<Tp> const_pointer; // typedef const Tp *const_pointer;
-    typedef const Ptr<Tp> const_pointer; // typedef const Tp *const_pointer;
-    typedef Tp &reference;
-    typedef const Tp &const_reference;
+    typedef CPtr<Tp> const_pointer; // typedef const Tp *const_pointer;
+    typedef Tp& reference;
+    typedef Tp const& const_reference;
     typedef Tp value_type;
 
     typedef true_type propagate_on_container_move_assignment;
@@ -160,11 +213,11 @@ public:
     template<class _Up>
     custom_allocator(const custom_allocator<_Up> &) noexcept {}
 
-    pointer address(reference __x) const noexcept { return std::addressof(__x); }
-
-    const_pointer address(const_reference __x) const noexcept {
-        return std::addressof(__x);
-    }
+//    pointer address(reference __x) const noexcept { return std::addressof(__x); }
+//
+//    const_pointer address(const_reference __x) const noexcept {
+//        return std::addressof(__x);
+//    }
 
     pointer allocate(size_type n, custom_allocator<void>::const_pointer = 0) {
         if (n > max_size())
@@ -186,8 +239,112 @@ public:
     }
 
     void destroy(pointer p) { p->~Tp(); }
+
+	bool operator==(const custom_allocator<Tp> other) const { return true; }
+	bool operator!=(const custom_allocator<Tp> other) const { return !operator==(other); }
+
 };
 
 } // namespace my
+
+// --------------------------------------------------------------------------------------
+
+template<class T>
+struct  std::pointer_traits<my::Ptr<T>> {
+	typedef my::Ptr<T> pointer;
+	using element_type = T;
+	using difference_type = std::ptrdiff_t;
+
+	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+};
+
+template<class T>
+struct  std::pointer_traits<const my::Ptr<T>> {
+	typedef const my::Ptr<T> pointer;
+	using element_type = const T;
+	using difference_type = std::ptrdiff_t;
+
+	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	static pointer pointer_to(element_type& __r) { return &__r; }
+};
+
+template<class T>
+struct  std::pointer_traits<my::CPtr<T>> {
+	typedef my::CPtr<T> pointer;
+	using element_type = const T;
+	using difference_type = std::ptrdiff_t;
+
+	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	static pointer pointer_to(element_type& __r) { return &__r; }
+};
+
+template<class T>
+struct  std::pointer_traits<const my::CPtr<T>> {
+	typedef const my::CPtr<T> pointer;
+	using element_type = const T;
+	using difference_type = std::ptrdiff_t;
+
+	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	static pointer pointer_to(element_type& __r) { return &__r; }
+};
+
+// ------------------------------------------------------
+
+template<class T>
+struct  std::iterator_traits<my::Ptr<T>>
+{
+typedef ptrdiff_t difference_type;
+typedef typename remove_cv<T>::type value_type;
+typedef my::Ptr<T> pointer;
+//typedef my::CPtr<T> const_pointer;
+typedef T& reference;
+typedef random_access_iterator_tag iterator_category;
+#if _LIBCPP_STD_VER > 17
+typedef contiguous_iterator_tag    iterator_concept;
+#endif
+};
+
+
+template<class T>
+struct  std::iterator_traits<const my::Ptr<T>>
+{
+typedef ptrdiff_t difference_type;
+typedef typename remove_cv<T>::type value_type;
+typedef const my::Ptr<T> pointer;
+typedef T& reference;
+typedef random_access_iterator_tag iterator_category;
+#if _LIBCPP_STD_VER > 17
+typedef contiguous_iterator_tag    iterator_concept;
+#endif
+};
+
+template<class T>
+struct  std::iterator_traits<my::CPtr<T>>
+{
+typedef ptrdiff_t difference_type;
+typedef typename remove_cv<T>::type value_type;
+typedef my::CPtr<T> pointer;
+typedef const my::CPtr<T> const_pointer;
+typedef T& reference;
+typedef const T& const_reference;
+typedef random_access_iterator_tag iterator_category;
+#if _LIBCPP_STD_VER > 17
+typedef contiguous_iterator_tag    iterator_concept;
+#endif
+};
+
+template<class T>
+struct  std::iterator_traits <const my::CPtr<T>>
+{
+typedef ptrdiff_t difference_type;
+typedef typename remove_cv<T>::type value_type;
+typedef my::CPtr<T> pointer;
+typedef const my::CPtr<T> const_pointer;
+typedef const T& const_reference;
+typedef random_access_iterator_tag iterator_category;
+#if _LIBCPP_STD_VER > 17
+typedef contiguous_iterator_tag    iterator_concept;
+#endif
+};
 
 #endif //FANCY_PTR_H

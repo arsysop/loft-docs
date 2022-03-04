@@ -34,7 +34,6 @@
 
 #include <vector>
 
-
 extern "C" int foo(const int* buf, unsigned long n);
 
 //! Imitate C++ wrapper for plain C API
@@ -56,3 +55,11 @@ int foo_at_rvalue(const FancyVec& v, size_t n) {
 void foo_at_lvalue(FancyVec& v, size_t n) {
 	v.at(n) = 42;
 }
+
+void test() {
+	FancyVec v(10);
+	v.insert(v.end(), 42);
+}
+
+// Explicit instantiation
+template class std::vector<int, my::custom_allocator<int>>;
