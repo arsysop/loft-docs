@@ -32,9 +32,12 @@
 
 #include "fancy_ptr.h"
 
+#include <cassert>
 #include <vector>
 
-extern "C" int foo(const int* buf, unsigned long n);
+extern "C" int foo([[maybe_unused]] const int* buf, [[maybe_unused]] unsigned long n) {
+	return 0;
+}
 
 //! Imitate C++ wrapper for plain C API
 int foo_adapter_default(const std::vector<int>& v) {
@@ -59,7 +62,13 @@ void foo_at_lvalue(FancyVec& v, size_t n) {
 void test() {
 	FancyVec v(10);
 	v.insert(v.end(), 42);
+	assert(v.size() == 11);
 }
 
 // Explicit instantiation
 template class std::vector<int, my::custom_allocator<int>>;
+
+int main() {
+	test();
+	return 0;
+}
