@@ -12,3 +12,9 @@ add_executable(fancy_ptr
         fancy_ptr.h
     )
 
+add_executable(fancy_ptr_trace
+        fancy_ptr.cpp
+        fancy_ptr.h
+        stacktrace.cpp
+    )
+

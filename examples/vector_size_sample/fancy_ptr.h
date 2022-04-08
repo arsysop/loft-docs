@@ -29,8 +29,19 @@
 using std::nullptr_t;
 using std::true_type;
 
+#include <string>
+#include <exception>
+
+std::string Backtrace(int skip = 1);
+
 namespace my {
 
+class Error : public std::runtime_error {
+public:
+	Error(const std::string& s) : std::runtime_error(s) {}
+};
+
+inline void throw_my() { throw Error(Backtrace(2)); }
 
 template<class Tp> class Ptr;
 template<class Tp> class CPtr;
@@ -45,8 +56,8 @@ struct Ptr {
 	typedef const T* const_pointer; //almost always T* or const T*
 	typedef std::random_access_iterator_tag iterator_category;
 
-	using P = T *;
-    T *p_;
+	using P = T*;
+	T* p_;
 
 	Ptr() : p_(nullptr) {}
 	Ptr(nullptr_t) : p_(nullptr) {}
@@ -108,16 +119,16 @@ struct CPtr {
 	typedef const T* const_pointer; //almost always T* or const T*
 	typedef std::random_access_iterator_tag iterator_category;
 
-    const T* p_;
+	const T* p_;
 
 	CPtr() : p_(nullptr) {}
 	CPtr(nullptr_t) : p_(nullptr) {}
 	CPtr(const T* p) : p_(p) {}
 
-	CPtr(const Ptr<T>& p) : CPtr(p.p_) {}
+	CPtr(const Ptr<T>& p) : p_(p.p_) { throw_my(); }
 
-	CPtr(const CPtr<T> &) = default;
-	CPtr(CPtr<T> &&) = default;
+	CPtr(const CPtr<T>&) = default;
+	CPtr(CPtr<T>&&) = default;
 	CPtr& operator=(const CPtr<T>&) = default;
 	CPtr& operator=(CPtr<T>&&) noexcept = default;
 
@@ -161,22 +172,23 @@ struct CPtr {
 	difference_type operator-(const CPtr& p) const { return (p_ - p.p_); }
 };
 
-template <typename T>
+template<typename T>
 bool operator<(const Ptr<T>& a, const CPtr<T>& b) { return a.p_ < b.p_; }
 
-template <typename T>
+template<typename T>
 bool operator<(const CPtr<T>& a, const Ptr<T>& b) { return a.p_ < b.p_; }
 
-template <typename T>
+template<typename T>
 bool operator<=(const Ptr<T>& a, const CPtr<T>& b) { return a.p_ <= b.p_; }
 
-template <typename T>
+template<typename T>
 bool operator<=(const CPtr<T>& a, const Ptr<T>& b) { return a.p_ <= b.p_; }
 
 template<class T>
 ptrdiff_t operator-(const Ptr<T>& a, const Ptr<T> b) {
 	return a.p_ - b.p_;
 }
+
 
 template<class Tp>
 class custom_allocator;
@@ -197,21 +209,21 @@ public:
 template<class Tp>
 class custom_allocator {
 public:
-    typedef size_t size_type;
-    typedef ptrdiff_t difference_type;
-    typedef Ptr<Tp> pointer; // was: typedef Tp *pointer;
-    typedef CPtr<Tp> const_pointer; // typedef const Tp *const_pointer;
-    typedef Tp& reference;
-    typedef Tp const& const_reference;
-    typedef Tp value_type;
+	typedef size_t size_type;
+	typedef ptrdiff_t difference_type;
+	typedef Ptr<Tp> pointer; // was: typedef Tp *pointer;
+	typedef CPtr<Tp> const_pointer; // typedef const Tp *const_pointer;
+	typedef Tp& reference;
+	typedef Tp const& const_reference;
+	typedef Tp value_type;
 
-    typedef true_type propagate_on_container_move_assignment;
-    typedef true_type is_always_equal;
+	typedef true_type propagate_on_container_move_assignment;
+	typedef true_type is_always_equal;
 
-    custom_allocator() noexcept {}
+	custom_allocator() noexcept {}
 
-    template<class _Up>
-    custom_allocator(const custom_allocator<_Up> &) noexcept {}
+	template<class _Up>
+	custom_allocator(const custom_allocator<_Up>&) noexcept {}
 
 //    pointer address(reference __x) const noexcept { return std::addressof(__x); }
 //
@@ -219,26 +231,26 @@ public:
 //        return std::addressof(__x);
 //    }
 
-    pointer allocate(size_type n, custom_allocator<void>::const_pointer = 0) {
-        if (n > max_size())
-            std::__throw_length_error("custom_allocatorator<T>::allocate(size_t n)"
-                                      " 'n' exceeds maximum supported size");
-        return static_cast<Tp *>(std::__libcpp_allocate(n * sizeof(Tp), alignof(Tp)));
-    }
+	pointer allocate(size_type n, custom_allocator<void>::const_pointer = 0) {
+		if (n > max_size())
+			std::__throw_length_error("custom_allocatorator<T>::allocate(size_t n)"
+			                          " 'n' exceeds maximum supported size");
+		return static_cast<Tp*>(std::__libcpp_allocate(n * sizeof(Tp), alignof(Tp)));
+	}
 
-    void deallocate(pointer p, size_type n) noexcept {
-        std::__libcpp_deallocate((void *) p.p_, n * sizeof(Tp), alignof(Tp));
-    }
+	void deallocate(pointer p, size_type n) noexcept {
+		std::__libcpp_deallocate((void*) p.p_, n * sizeof(Tp), alignof(Tp));
+	}
 
-    size_type max_size() const noexcept { return size_type(~0) / sizeof(Tp); }
+	size_type max_size() const noexcept { return size_type(~0) / sizeof(Tp); }
 
-    template<class Up, class... Args>
-    void
-    construct(Up *p, Args &&... args) {
-        ::new((void *) p) Up(std::forward<Args>(args)...);
-    }
+	template<class Up, class... Args>
+	void
+	construct(Up* p, Args&& ... args) {
+		::new((void*) p) Up(std::forward<Args>(args)...);
+	}
 
-    void destroy(pointer p) { p->~Tp(); }
+	void destroy(pointer p) { p->~Tp(); }
 
 	bool operator==(const custom_allocator<Tp> other) const { return true; }
 	bool operator!=(const custom_allocator<Tp> other) const { return !operator==(other); }
@@ -250,100 +262,96 @@ public:
 // --------------------------------------------------------------------------------------
 
 template<class T>
-struct  std::pointer_traits<my::Ptr<T>> {
+struct std::pointer_traits<my::Ptr<T>> {
 	typedef my::Ptr<T> pointer;
 	using element_type = T;
 	using difference_type = std::ptrdiff_t;
 
-	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	template<class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
 };
 
 template<class T>
-struct  std::pointer_traits<const my::Ptr<T>> {
+struct std::pointer_traits<const my::Ptr<T>> {
 	typedef const my::Ptr<T> pointer;
 	using element_type = const T;
 	using difference_type = std::ptrdiff_t;
 
-	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	template<class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
 	static pointer pointer_to(element_type& __r) { return &__r; }
 };
 
 template<class T>
-struct  std::pointer_traits<my::CPtr<T>> {
+struct std::pointer_traits<my::CPtr<T>> {
 	typedef my::CPtr<T> pointer;
 	using element_type = const T;
 	using difference_type = std::ptrdiff_t;
 
-	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	template<class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
 	static pointer pointer_to(element_type& __r) { return &__r; }
 };
 
 template<class T>
-struct  std::pointer_traits<const my::CPtr<T>> {
+struct std::pointer_traits<const my::CPtr<T>> {
 	typedef const my::CPtr<T> pointer;
 	using element_type = const T;
 	using difference_type = std::ptrdiff_t;
 
-	template <class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
+	template<class _Up> using rebind = typename std::__pointer_traits_rebind<pointer, _Up>::type;
 	static pointer pointer_to(element_type& __r) { return &__r; }
 };
 
 // ------------------------------------------------------
 
 template<class T>
-struct  std::iterator_traits<my::Ptr<T>>
-{
-typedef ptrdiff_t difference_type;
-typedef typename remove_cv<T>::type value_type;
-typedef my::Ptr<T> pointer;
+struct std::iterator_traits<my::Ptr<T>> {
+	typedef ptrdiff_t difference_type;
+	typedef typename remove_cv<T>::type value_type;
+	typedef my::Ptr<T> pointer;
 //typedef my::CPtr<T> const_pointer;
-typedef T& reference;
-typedef random_access_iterator_tag iterator_category;
+	typedef T& reference;
+	typedef random_access_iterator_tag iterator_category;
 #if _LIBCPP_STD_VER > 17
-typedef contiguous_iterator_tag    iterator_concept;
+	typedef contiguous_iterator_tag    iterator_concept;
 #endif
 };
 
 
 template<class T>
-struct  std::iterator_traits<const my::Ptr<T>>
-{
-typedef ptrdiff_t difference_type;
-typedef typename remove_cv<T>::type value_type;
-typedef const my::Ptr<T> pointer;
-typedef T& reference;
-typedef random_access_iterator_tag iterator_category;
+struct std::iterator_traits<const my::Ptr<T>> {
+	typedef ptrdiff_t difference_type;
+	typedef typename remove_cv<T>::type value_type;
+	typedef const my::Ptr<T> pointer;
+	typedef T& reference;
+	typedef random_access_iterator_tag iterator_category;
 #if _LIBCPP_STD_VER > 17
-typedef contiguous_iterator_tag    iterator_concept;
+	typedef contiguous_iterator_tag    iterator_concept;
 #endif
 };
 
 template<class T>
-struct  std::iterator_traits<my::CPtr<T>>
-{
-typedef ptrdiff_t difference_type;
-typedef typename remove_cv<T>::type value_type;
-typedef my::CPtr<T> pointer;
-typedef const my::CPtr<T> const_pointer;
-typedef T& reference;
-typedef const T& const_reference;
-typedef random_access_iterator_tag iterator_category;
+struct std::iterator_traits<my::CPtr<T>> {
+	typedef ptrdiff_t difference_type;
+	typedef typename remove_cv<T>::type value_type;
+	typedef my::CPtr<T> pointer;
+	typedef const my::CPtr<T> const_pointer;
+	typedef T& reference;
+	typedef const T& const_reference;
+	typedef random_access_iterator_tag iterator_category;
 #if _LIBCPP_STD_VER > 17
-typedef contiguous_iterator_tag    iterator_concept;
+	typedef contiguous_iterator_tag    iterator_concept;
 #endif
 };
 
 template<class T>
-struct  std::iterator_traits <const my::CPtr<T>>
-{
-typedef ptrdiff_t difference_type;
-typedef typename remove_cv<T>::type value_type;
-typedef my::CPtr<T> pointer;
-typedef const my::CPtr<T> const_pointer;
-typedef const T& const_reference;
-typedef random_access_iterator_tag iterator_category;
+struct std::iterator_traits<const my::CPtr<T>> {
+	typedef ptrdiff_t difference_type;
+	typedef typename remove_cv<T>::type value_type;
+	typedef my::CPtr<T> pointer;
+	typedef const my::CPtr<T> const_pointer;
+	typedef const T& const_reference;
+	typedef random_access_iterator_tag iterator_category;
 #if _LIBCPP_STD_VER > 17
-typedef contiguous_iterator_tag    iterator_concept;
+	typedef contiguous_iterator_tag    iterator_concept;
 #endif
 };
 

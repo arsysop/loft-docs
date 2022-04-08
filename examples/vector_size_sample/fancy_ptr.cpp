@@ -32,8 +32,11 @@
 
 #include "fancy_ptr.h"
 
+#include <iostream>
 #include <cassert>
 #include <vector>
+
+using namespace std;
 
 extern "C" int foo([[maybe_unused]] const int* buf, [[maybe_unused]] unsigned long n) {
 	return 0;
@@ -59,10 +62,13 @@ void foo_at_lvalue(FancyVec& v, size_t n) {
 	v.at(n) = 42;
 }
 
-void test() {
+void test() try {
 	FancyVec v(10);
 	v.insert(v.end(), 42);
 	assert(v.size() == 11);
+} catch (std::exception& e) {
+	cerr << "[ERROR] terminating with exception:\n" << e.what() << endl;
+//	throw;
 }
 
 // Explicit instantiation
