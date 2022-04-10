@@ -41,7 +41,7 @@ public:
 	Error(const std::string& s) : std::runtime_error(s) {}
 };
 
-inline void throw_my() { throw Error(Backtrace(2)); }
+//inline void throw_my() { throw Error(Backtrace(2)); }
 
 template<class Tp> class Ptr;
 template<class Tp> class CPtr;
@@ -125,7 +125,7 @@ struct CPtr {
 	CPtr(nullptr_t) : p_(nullptr) {}
 	CPtr(const T* p) : p_(p) {}
 
-	CPtr(const Ptr<T>& p) : p_(p.p_) { throw_my(); }
+	CPtr(const Ptr<T>& p) : p_(p.p_) {}
 
 	CPtr(const CPtr<T>&) = default;
 	CPtr(CPtr<T>&&) = default;
