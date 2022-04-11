@@ -12,3 +12,7 @@ add_executable(fancy_ptr
         fancy_ptr.h
     )
 
+add_executable(test_equal
+        traits/EqualityComparable.cpp
+    )
+
